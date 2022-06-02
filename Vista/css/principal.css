@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Martel;
+    src: url("../fonts/Martel-Black.ttf") format("truetype"),
+    url("../fonts/Martel-Bold.ttf") format("truetype"),
+    url("../fonts/Martel-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Martel-ExtraLight.ttf") format("truetype"),
+    url("../fonts/Martel-Light.ttf") format("truetype"),
+    url("../fonts/Martel-Regular.ttf") format("truetype"),
+    url("../fonts/Martel-SemiBold.ttf") format("truetype");
+}
+:root{
+    --blue-light:rgb(3, 131, 240);
+    --blue-light-2:rgb(120 187 245);
+    --gray-light:rgb(202, 202, 202);
+    --blue-dark:rgb(0,38,71);
+    --font-light:white;
+    --gray-light-2:rgb(229, 229, 229);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+body{
+    font-family: 'Martel', serif;
+}
+button{
+    background-color: transparent!important;
+    border: none;
+}
+.body-title{
+    text-align: center;
+}

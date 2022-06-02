@@ -1,0 +1,22 @@
+@media (max-width: 667px) {
+ 
+  .title-product-container{
+      background-color: var(--gray-light);
+      padding: 1em;
+      color:var(--font-light)
+  }
+  .product-card{
+      width: 90%;
+      margin: 1em auto;
+      padding: 1em;
+      border:1px solid var(--gray-light);
+      box-sizing: border-box;
+      font-size: .8em;
+  }
+  .product-img{
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+      margin: auto;
+  }
+}

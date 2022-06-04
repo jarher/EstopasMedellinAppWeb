@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Martel;
-    src: url("../fonts/Martel-Black.ttf") format("truetype"),
+  font-family: Martel;
+  src: url("../fonts/Martel-Black.ttf") format("truetype"),
     url("../fonts/Martel-Bold.ttf") format("truetype"),
     url("../fonts/Martel-ExtraBold.ttf") format("truetype"),
     url("../fonts/Martel-ExtraLight.ttf") format("truetype"),
@@ -8,72 +8,105 @@
     url("../fonts/Martel-Regular.ttf") format("truetype"),
     url("../fonts/Martel-SemiBold.ttf") format("truetype");
 }
-:root{
-    --blue-light:rgb(3, 131, 240);
-    --blue-light-2:rgb(120 187 245);
-    --gray-light:rgb(202, 202, 202);
-    --blue-dark:rgb(0,38,71);
-    --font-light:white;
-    --gray-light-2:rgb(229, 229, 229);
-    --red-alert: rgb(255, 90, 90);
-    --font-dark-1: rgb(64, 64, 64);
+:root {
+  --blue-light: rgb(3, 131, 240);
+  --blue-light-2: rgb(120 187 245);
+  --blue-light-3: rgb(224, 235, 244);
+  --gray-light: rgb(202, 202, 202);
+  --blue-dark: rgb(0, 38, 71);
+  --font-light: white;
+  --gray-light-2: rgb(229, 229, 229);
+  --red-alert: rgb(255, 90, 90);
+  --font-dark-1: rgb(64, 64, 64);
 }
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-html{
-    scroll-behavior: smooth;
-    font-size: 16px;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
-body{
-    font-family: 'Martel', serif;
+body {
+  font-family: "Martel", serif;
 }
-button{
-    background-color: transparent;
-    border: none;
+button {
+  background-color: transparent;
+  border: none;
 }
-.body-title{
-    text-align: center;
+.body-title {
+  text-align: center;
 }
-.bell{
-    background-image: url('../img/bell-fill.svg');
-    background-repeat: no-repeat;
-    width: 1.2em;
-    height: 1.2em;
-    display: block;
-    
+.bell {
+  background-image: url("../img/bell-fill.svg");
+  background-repeat: no-repeat;
+  width: 1.2em;
+  height: 1.2em;
+  display: block;
 }
-.btn{
-    border-radius: 10px;
-    color: var(--font-light);
-    transition: all 0.2s ease-in-out;
-    box-shadow: 3px 3px 5px var(--gray-light-2);
+.btn {
+  border-radius: 10px;
+  color: var(--font-light);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 3px 3px 5px var(--gray-light-2);
+  display: flex;
+  align-items: center;
 }
-.btn-primary{
-background-color: var(--blue-light)!important;
+.btn-primary {
+  background-color: var(--blue-light) !important;
 }
-.btn-alert{
-    background-color: var(--red-alert)!important;
+.btn-alert {
+  background-color: var(--red-alert) !important;
+  justify-content: center;
 }
-.btn:active{
-    transform: scale(0.9);
-    box-shadow: 0 0 0 transparent;
+.btn:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 0 transparent;
 }
-@media (max-width:667px){
-    .body-title{
-        font-size: .8em;
-        line-height: 2.3em;
-        margin-top:1em;
-    }
-    .btn,
-    .select{
-      font-size: .8em;
-      padding: .3em;
+.hide {
+  display: none !important;
+}
+.opacity-0 {
+  opacity: 0 !important;
+}
+@media (max-width: 667px) {
+  .body-title {
+    font-size: 0.6em;
+    line-height: 2.3em;
+    margin-top: 1em;
   }
-  .row{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+  .btn,
+  select {
+    font-size: 0.8em;
+    padding: 0.3em;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (min-width: 668px) {
+  .body-title {
+    text-align: left;
+  }
+}
+@media (min-width: 668px) and (max-width: 915px) {
+  .body-title {
+    font-size: 0.7em;
+    margin-top: 1em;
+    margin-left: 2.6em;
+  }
+  .btn,
+  select {
+    font-size: 1.1em;
+    padding: 0.5em;
+  }
+}
+@media (min-width: 916px) and (max-width: 1440px) {
+  .body-title {
+    font-size: 0.5em;
+    margin-top: 1.2em;
+    margin-left: 4em;
   }
 }

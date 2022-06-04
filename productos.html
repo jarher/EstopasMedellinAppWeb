@@ -10,7 +10,7 @@
 
 <body>
     <header class="main-header">
-        <button id="btn-menu-nav">
+        <button id="button-menu-nav">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
                 viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -18,21 +18,33 @@
             </svg>
         </button>
         <div class="banner">
-            <a href="index.html">Estopas <img src="./Vista/img/diamante.png" alt="diamante-logo" id="logo"> Medellín</a>
+            <a href="index.html">Estopas
+                <img src="./Vista/img/diamante.png" alt="diamante-logo" id="logo" />
+                Medellín</a>
         </div>
         <nav class="main-nav collapse">
             <ul>
-                <li><a href="">Quienes somos</a> </li>
+                <li><a href="">Quienes somos</a></li>
                 <li><a href="">Productos</a></li>
                 <li><a href="">Contacto</a></li>
-                <li>
+                <li id="search-li" class="hide opacity-0">
                     <form action="" id="search-form">
                         <input type="search" name="search" id="search" placeholder="Ingrese un término de búsqueda" />
-                        <input type="submit" value="Buscar">
+                        <input type="submit" value="Buscar" />
                     </form>
+                </li>
+                <li id="button-search-wrapper">
+                    <button class="btn btn-search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
                 </li>
             </ul>
         </nav>
+    
     </header>
     <main class="main-container">
         <div class="title-product-container">

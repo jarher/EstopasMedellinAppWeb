@@ -12,11 +12,15 @@
   --blue-light: rgb(3, 131, 240);
   --blue-light-2: rgb(120 187 245);
   --blue-light-3: rgb(224, 235, 244);
-  --gray-light: rgb(202, 202, 202);
+  --grey-light: rgb(202, 202, 202);
+  --grey-light-2: rgb(229, 229, 229);
+  --grey-light-3:rgb(168, 168, 168);
+  --grey-light-4:rgb(217,217,217);
   --blue-dark: rgb(0, 38, 71);
+  --blue-dark-2:rgb(0,25, 46);
   --font-light: white;
-  --gray-light-2: rgb(229, 229, 229);
   --red-alert: rgb(255, 90, 90);
+  --red-light:rgb(192,0,0);
   --font-dark-1: rgb(64, 64, 64);
 }
 * {
@@ -48,7 +52,7 @@ button {
   border-radius: 10px;
   color: var(--font-light);
   transition: all 0.2s ease-in-out;
-  box-shadow: 3px 3px 5px var(--gray-light-2);
+  box-shadow: 3px 3px 5px var(--grey-light-2);
   display: flex;
   align-items: center;
 }

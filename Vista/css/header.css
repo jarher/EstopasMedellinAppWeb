@@ -17,7 +17,7 @@ a {
   text-decoration: none;
 }
 .main-header {
-  border-bottom: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--grey-light);
   position: relative;
   display: flex;
   align-items: center;
@@ -176,7 +176,7 @@ ul {
   }
   .main-nav ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: relative;
   }
@@ -188,6 +188,9 @@ ul {
     background: var(--font-light);
     opacity: 1;
   }
+  .btn-search:hover{
+    cursor:pointer;
+  }
 }
 @media (min-width: 916px) and (max-width: 1440px) {
   .main-header {
@@ -197,7 +200,7 @@ ul {
     font-size: 2em;
   }
   .main-nav {
-    width: 40%;
+    width: 30%;
   }
   .main-nav ul li a {
     font-size: 1em;

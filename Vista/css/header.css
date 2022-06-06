@@ -194,13 +194,13 @@ ul {
 }
 @media (min-width: 916px) and (max-width: 1440px) {
   .main-header {
-    padding: 1em 2em;
+    padding: 1em 5em;
   }
   .banner a {
     font-size: 2em;
   }
   .main-nav {
-    width: 30%;
+    width: 40%;
   }
   .main-nav ul li a {
     font-size: 1em;

@@ -1,9 +1,29 @@
 .form {
-  border: 1px solid var(--gray-light);
+  border: 1px solid var(--grey-light);
 }
 .form input[type="submit"] {
   background-color: var(--blue-light);
   color: var(--font-light);
+  transition: all 0.2s ease-in-out;
+}
+ .form input[type="submit"]:active{
+   transform: scale(0.9);
+ }
+.map-container {
+  border-top: 1px solid var(--grey-light);
+  padding-top: 1em;
+}
+.form,
+.form input,
+.form textarea {
+  border-radius: 10px;
+}
+.form input,
+.form textarea {
+  border: none;
+  outline: none;
+  background-color: var(--grey-light-5);
+  width: 100%
 }
 @media (max-width: 667px) {
   .contact-container,
@@ -11,8 +31,13 @@
     width: 90%;
     margin: auto;
   }
+  .form-container .text-right {
+    font-size: 0.9em;
+  }
   .text-form {
     font-size: 0.9em;
+    margin-top: 1em;
+    text-align: justify;
   }
   .form {
     margin: 1em 0;
@@ -31,26 +56,15 @@
     height: 100%;
     padding-left: 3%;
   }
-  .form textarea{
+  .form textarea {
     padding: 1em;
   }
-  .form,
-  .form input,
-  .form textarea {
-    border-radius: 10px;
-  }
-  .form input,
-  .form textarea {
-    width: 100%;
-    border: none;
-    outline: none;
-    background-color: var(--gray-light-2);
-  }
+
   .form input[type="submit"] {
     width: 20%;
     padding: 0.5em;
   }
-  .map-container{
+  .map-container {
     margin: 1em auto;
   }
   .map-frame {
@@ -59,5 +73,132 @@
   iframe {
     width: 100%;
     height: 100%;
+  }
+}
+@media (min-width: 668px) and (max-width: 915px) {
+  .contact-container,
+  .map-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .form-container .text-right {
+    font-size: 0.9em;
+  }
+  .text-form {
+    font-size: 0.9em;
+    margin-top: 1em;
+    text-align: justify;
+  }
+  .form {
+    margin: 1em auto;
+    padding: 1em;
+    width: 70%;
+  }
+  .form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    height: 2em;
+  }
+  label {
+    display: none;
+  }
+  .form input {
+    height: 100%;
+    padding-left: 3%;
+  }
+  .form textarea {
+    padding: 1em;
+  }
+  .form input[type="submit"] {
+    width: 20%;
+    padding: 0.5em;
+  }
+  .map-container {
+    margin: 1em auto;
+  }
+  .map-frame {
+    height: 50vh;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .text-right {
+    text-align: left;
+    padding-left: 2em;
+  }
+  .map-frame {
+    margin-top: 1em;
+  }
+}
+@media (min-width: 916px) and (max-width: 1440px) {
+  .contact-container {
+    width: 75%;
+    margin: 2em auto 0 auto;
+  }
+  .text-form,
+  .telephone-text,
+  .form-container .text-right {
+    width: 35%;
+  }
+  .form {
+    width: 47%;
+  }
+  .text-form,
+  .telephone-text,
+  .form-container .text-right {
+    float: left;
+  }
+  .form-container .text-right {
+    text-align: left;
+  }
+  .form {
+    float: right;
+    box-sizing: border-box;
+    padding: 2em;
+  }
+  .text-form {
+    font-size: 1.2em;
+  }
+  .telephone-text{
+    margin-top: 2em;
+    font-size: 1.1em;
+  }
+  .form-container .text-right{
+    margin-left: 2em;
+  }
+  .map-container .text-right {
+    text-align: left;
+  }
+  .map-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+  }
+  .ubication,
+  .map-container .text-right {
+    width: 100%;
+  }
+  .map-frame {
+    margin: 2em 0;
+  }
+  .form-wrapper input,
+  .form-wrapper textarea{
+    padding: 0.8em;
+    box-sizing: border-box;
+  }
+  .form-wrapper label{
+    margin-bottom: 0.5em;
+  }
+  .form-wrapper{
+    margin-bottom: 1em;
+  }
+  .form input[type="submit"]{
+    padding: 0.5em;
+    width: 20%;
   }
 }

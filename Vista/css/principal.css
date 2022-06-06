@@ -16,6 +16,7 @@
   --grey-light-2: rgb(229, 229, 229);
   --grey-light-3:rgb(168, 168, 168);
   --grey-light-4:rgb(217,217,217);
+  --grey-light-5: rgb(241 241 241);
   --blue-dark: rgb(0, 38, 71);
   --blue-dark-2:rgb(0,25, 46);
   --font-light: white;
@@ -39,7 +40,10 @@ button {
   border: none;
 }
 .body-title {
-  text-align: center;
+  color: var(--blue-light);
+  border-left-color: var(--blue-light);
+  border-left-style: solid;
+  box-sizing: border-box;
 }
 .bell {
   background-image: url("../img/bell-fill.svg");
@@ -73,12 +77,26 @@ button {
 .opacity-0 {
   opacity: 0 !important;
 }
+.text-right{
+  text-align: right;
+}
+
+input:focus,
+textarea:focus{
+  box-shadow: 0 0 7px var(--blue-light-2);
+  transition: all 0.2s ease-in-out;
+}
 @media (max-width: 667px) {
+
   .body-title {
     font-size: 0.6em;
-    line-height: 2.3em;
     margin-top: 1em;
+    width: 88%;
+    padding-left: 1em;
+    border-left-width: 5px;
+  
   }
+  
   .btn,
   select {
     font-size: 0.8em;
@@ -90,16 +108,14 @@ button {
     align-items: center;
   }
 }
-@media (min-width: 668px) {
-  .body-title {
-    text-align: left;
-  }
-}
 @media (min-width: 668px) and (max-width: 915px) {
   .body-title {
-    font-size: 0.7em;
-    margin-top: 1em;
-    margin-left: 2.6em;
+    font-size: 0.8em;
+    width: 90%;
+    margin: 0.8em auto;
+    padding-left: 1em;
+    border-left-width: 5px;
+  
   }
   .btn,
   select {
@@ -109,8 +125,16 @@ button {
 }
 @media (min-width: 916px) and (max-width: 1440px) {
   .body-title {
-    font-size: 0.5em;
-    margin-top: 1.2em;
-    margin-left: 4em;
+   margin-top: 1.5em;
+   border-width: 0.6em;
+   padding-left: 1em;
+   /* border-bottom: 2px solid var(--blue-light-2); */
   }
+  .main-container{
+   width: 88%;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+  }
+  
 }

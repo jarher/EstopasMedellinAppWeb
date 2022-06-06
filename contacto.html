@@ -45,49 +45,55 @@
                 </li>
             </ul>
         </nav>
-    
+
     </header>
     <main class="main-container">
+        <div class="body-title">
+            <h1>
+                Contacto
+            </h1>
+        </div>
         <div class="contact-container">
-            <div class="body-title">
-                <h1>
-                    Contacto
-                </h1>
-            </div>
             <div class="form-container">
                 <p class="text-form">
-                    Gracias por confiar en nosotros, por favor diligencie este formulario y háganos saber sus dudas, inquietudez o interés
+                    Gracias por confiar en nosotros. Por favor diligencie este formulario y háganos saber sus dudas,
+                    inquietudes o interés
                     en comprar nuestros productos.
                 </p>
                 <form action="" class="form">
                     <div class="form-wrapper">
-                        <label for="name_contact">Nombre</label>
+                        <label for="name_contact">Nombre:</label>
                         <input type="text" name="name_contact" id="name_contact" placeholder="Ingrese su nombre">
                     </div>
                     <div class="form-wrapper">
-                        <label for="tel_contact">Teléfono</label>
-                        <input type="tel" name="tel_contact" id="tel_contact" placeholder="Ingrese su teléfono" >
+                        <label for="tel_contact">Teléfono:</label>
+                        <input type="tel" name="tel_contact" id="tel_contact" placeholder="Ingrese su teléfono">
                     </div>
                     <div class="form-wrapper">
-                        <label for="email_contact">Correo electrónico</label>
-                        <input type="email" name="email_contact" id="email_contact" placeholder="Ingrese su coreo electrónico">
+                        <label for="email_contact">Correo electrónico:</label>
+                        <input type="email" name="email_contact" id="email_contact"
+                            placeholder="Ingrese su coreo electrónico">
                     </div>
                     <div class="form-wrapper">
-                        <label for="subject_contact">Asunto</label>
+                        <label for="subject_contact">Asunto:</label>
                         <input type="text" name="subject_contact" id="subject_contact" placeholder="Ingrese el asunto">
                     </div>
                     <div class="form-wrapper">
-                        <label for="message_contact">Mensaje</label>
-                        <textarea name="message_contact" id="message_contact" cols="30" rows="30" placeholder="Ingrese su inquetud o consulta"></textarea>
+                        <label for="message_contact">Mensaje:</label>
+                        <textarea name="message_contact" id="message_contact" cols="30" rows="10"
+                            placeholder="Ingrese su inquetud o consulta"></textarea>
                     </div>
 
                     <input type="submit" value="Enviar">
                 </form>
-                <p class="telephone-text">Telefonos:</p>
+                <p class="telephone-text">Telefonos</p>
+                <div class="text-right"><span>fijo: </span> 901 67 63 - 461 87 93</div>
+                <div class="text-right"><span>Celular: </span> 312 323 6527 - 314 239 7397</div>
             </div>
         </div>
         <div class="map-container">
-            <p class="ubication">Ubicación: calle 44 # 8 - 25 barrio León XIII, Soacha Bogotá-Colombia</p>
+            <p class="ubication">Ubicación</p>
+            <div class="text-right">calle 44 # 8 - 25. Barrio León XIII. Soacha Bogotá-Colombia</div>
             <div class="map-frame">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1988.501997588326!2d-74.19698694216648!3d4.593304599165759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e35963306d9%3A0x8668ef06c75b30a5!2sCl.%2044%20%23825%2C%20Soacha%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1654139521628!5m2!1ses!2sco"
@@ -98,24 +104,58 @@
 
     </main>
     <footer>
-        <div class="cf-1">
-            <button id="btn-subscribe"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <div class="subscribe-wrapper">
+            <button id="btn-subscribe">
+                <span>Suscríbase</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
+                    viewBox="0 0 16 16">
                     <path
                         d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                 </svg>
-                <span>Suscribase</span></button>
+            </button>
+            <div id="newsletter-wrapper">
+                <div class="newsletter-body">
+                    <div class="newsletter-text-wrapper">
+                        Reciba directamente en su correo electrónico alertas sobre nuevos productos, promociones y ofertas
+                    </div>
+                    <div class="newsletter-form-wrapper">
+                        <form action="" method="POST">
+                            <input type="email" name="email-subscriber" id="email-subscriber" placeholder="Ingrese su email"
+                                required />
+                            <input type="submit" value="Suscribirme" />
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="cf-2">
+        <address class="contact-footer-wrapper">
+            <div class="contact-footer-title">Contacto</div>
+            <div class="company-ubication-link">
+                <div>Dirección</div>
+                <div>Calle 44 # 8 - 25, barrio Leon XIII Soacha - Bogotá D.C.</div>
+            </div>
+            <div class="company-phone">
+                <div>Teléfonos</div>
+                <div><span>fijo: </span> 901 67 63 - 461 87 93</div>
+                <div><span>Celular: </span> 312 323 6527 - 314 239 7397</div>
+            </div>
+            <div class="company-email">
+                <div>Correo electrónico</div>
+                <div>estopasmedellin@gmail.com</div>
+            </div>
+            <div class="contact-form-link">
+                <a href="">Formulario de contacto</a>
+            </div>
+        </address>
+        <div class="menu-nav-footer">
             <ul>
                 <li><a href="">Inicio</a></li>
                 <li><a href="">Acerca de</a></li>
                 <li><a href="">Productos</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="">Mapa del sitio</a></li>
             </ul>
         </div>
-        <div class="cf-3">
-            <p>Síganos</p>
+        <div class="redes-wrapper">
             <ul class="social-media-container">
                 <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-facebook" viewBox="0 0 16 16">
@@ -134,7 +174,7 @@
                         </svg></a></li>
             </ul>
         </div>
-        <div class="cf-4">
+        <div class="copyright-wrapper">
             <p>Copyright &copy;2022</p>
         </div>
     </footer>

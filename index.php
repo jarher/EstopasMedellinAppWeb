@@ -1,0 +1,9 @@
+<?php 
+    require_once('./Vista/templates/header.html');
+?>
+<main>
+    inicio
+</main>
+<?php 
+    require_once('./Vista/templates/footer.html');
+?>

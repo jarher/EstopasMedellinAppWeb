@@ -1,0 +1,10 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteBase /EstopasMedellinAppWeb
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+Rewrite ^(.*)$ index.php?r=$1 [L]
+Rewrite ^(.*)$ admin.php?r=$1 [L]

@@ -1,6 +1,4 @@
-@media (max-width: 667px) {
-  .admin-login-wrapper{
-    width: 90%;
-    margin:auto
-  }
+.admin-login-wrapper {
+  width: 90%;
+  margin: auto;
 }

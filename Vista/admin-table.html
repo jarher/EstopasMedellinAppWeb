@@ -1,4 +1,5 @@
 <?php 
+    //tabla para gestionar los usuarios administradores del sistema
     require_once('./Controlador/AdministradorController.php');
     $admin = new AdministradorController();
     $admin_data = $admin->read();

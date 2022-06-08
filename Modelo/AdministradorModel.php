@@ -1,5 +1,6 @@
 <?php 
     class AdministradorModel extends Model {
+
         public function create($admin_data = array()){
             foreach ($admin_data as $key => $value){
                 $$key = $value;
@@ -27,6 +28,19 @@
         public function delete($admin_email = ''){
             $this->query = "DELETE FROM administrador WHERE email = '$admin_email'";
             $this->set_query();
+        }
+
+        public function validateAdmin($admin_email, $admin_password){
+            $this->query = "SELECT * FROM administrador WHERE email = '$admin_email' AND password = MD5('$admin_password')"; 
+            $this->get_query();
+
+            $data = array();
+
+            foreach($this->rows as $key => $value){
+                array_push($data, $value);
+            }
+
+            return $data;
         }
 
         public function __destruct(){

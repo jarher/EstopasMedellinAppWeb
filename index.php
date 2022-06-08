@@ -1,9 +1,7 @@
 <?php 
-    require_once('./Vista/templates/header.html');
-?>
-<main>
-    inicio
-</main>
-<?php 
-    require_once('./Vista/templates/footer.html');
+    require_once('./Controlador/Autoload.php');
+    $autoload = new Autoload();
+    
+    $route = isset($_GET['r']) ? $_GET['r'] : 'home'; 
+    $estopasmedellin = new Router($route);
 ?>

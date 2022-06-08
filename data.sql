@@ -10,4 +10,4 @@ CREATE TABLE administrador(
     password char(30) UNIQUE NOT NULL
 );
 
-INSERT INTO administrador (nombre, email, password) values ('jeffer', 'jefferh33@gmail.com', '123456'),('luis', 'luisrojas@gmail.com', 'abcde'),('betty','betty@gmail.com','qwerty');
+INSERT INTO administrador (nombre, email, password) values ('jeffer', 'jefferh33@gmail.com', MD5('123456')),('luis', 'luisrojas@gmail.com', MD5('abcde')),('betty','betty@gmail.com',MD5('qwerty'));

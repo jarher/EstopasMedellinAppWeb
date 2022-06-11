@@ -3,7 +3,7 @@
         private $sesion;
 
         public function __construct(){
-            $this->sesion = new AdministradorModel();
+            $this->sesion = new AdministradorModelo();
         }
 
         public function login($admin_email, $admin_password){

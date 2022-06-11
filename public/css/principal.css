@@ -1,12 +1,6 @@
 @font-face {
-  font-family: Martel;
-  src: url("../fonts/Martel-Black.ttf") format("truetype"),
-    url("../fonts/Martel-Bold.ttf") format("truetype"),
-    url("../fonts/Martel-ExtraBold.ttf") format("truetype"),
-    url("../fonts/Martel-ExtraLight.ttf") format("truetype"),
-    url("../fonts/Martel-Light.ttf") format("truetype"),
-    url("../fonts/Martel-Regular.ttf") format("truetype"),
-    url("../fonts/Martel-SemiBold.ttf") format("truetype");
+  font-family: Stoke;
+  src: url("../fonts/Stoke-Regular.ttf") format("truetype");
 }
 :root {
   --blue-light: rgb(3, 131, 240);
@@ -14,14 +8,14 @@
   --blue-light-3: rgb(224, 235, 244);
   --grey-light: rgb(202, 202, 202);
   --grey-light-2: rgb(229, 229, 229);
-  --grey-light-3:rgb(168, 168, 168);
-  --grey-light-4:rgb(217,217,217);
+  --grey-light-3: rgb(168, 168, 168);
+  --grey-light-4: rgb(217, 217, 217);
   --grey-light-5: rgb(241 241 241);
   --blue-dark: rgb(0, 38, 71);
-  --blue-dark-2:rgb(0,25, 46);
+  --blue-dark-2: rgb(0, 25, 46);
   --font-light: white;
   --red-alert: rgb(255, 90, 90);
-  --red-light:rgb(192,0,0);
+  --red-light: rgb(192, 0, 0);
   --font-dark-1: rgb(64, 64, 64);
 }
 * {
@@ -32,18 +26,38 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
 }
-body {
-  font-family: "Martel", serif;
+body,
+.container,
+.main-container {
+  position: relative;
 }
-button {
-  background-color: transparent;
+body {
+  font-family: "Stoke", serif;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+footer,
+form {
+  display: flex;
+}
+form {
+  flex-direction: column;
+}
+input {
   border: none;
+  outline: none;
+  width: 100%;
 }
 .body-title {
   color: var(--blue-light);
   border-left-color: var(--blue-light);
   border-left-style: solid;
   box-sizing: border-box;
+  width: 100%;
+  margin-top: 2%;
+  padding-left: 1%;
 }
 .bell {
   background-image: url("../img/bell-fill.svg");
@@ -53,12 +67,19 @@ button {
   display: block;
 }
 .btn {
+  border: none;
+  outline: none;
   border-radius: 10px;
-  color: var(--font-light);
   transition: all 0.2s ease-in-out;
-  box-shadow: 3px 3px 5px var(--grey-light-2);
   display: flex;
   align-items: center;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn:active {
+  border: none;
+  outline: none;
 }
 .btn-primary {
   background-color: var(--blue-light) !important;
@@ -68,8 +89,7 @@ button {
   justify-content: center;
 }
 .btn:active {
-  transform: scale(0.9);
-  box-shadow: 0 0 0 transparent;
+  transform: scale(0.95);
 }
 .hide {
   display: none !important;
@@ -77,30 +97,19 @@ button {
 .opacity-0 {
   opacity: 0 !important;
 }
-.text-right{
+.text-right {
   text-align: right;
 }
-
 input:focus,
-textarea:focus{
+textarea:focus {
   box-shadow: 0 0 7px var(--blue-light-2);
   transition: all 0.2s ease-in-out;
 }
-@media (max-width: 667px) {
 
+@media (max-width: 667px) {
   .body-title {
     font-size: 0.6em;
-    margin-top: 1em;
-    width: 88%;
-    padding-left: 1em;
     border-left-width: 5px;
-  
-  }
-  
-  .btn,
-  select {
-    font-size: 0.8em;
-    padding: 0.3em;
   }
   .row {
     display: flex;
@@ -111,30 +120,24 @@ textarea:focus{
 @media (min-width: 668px) and (max-width: 915px) {
   .body-title {
     font-size: 0.8em;
-    width: 90%;
-    margin: 0.8em auto;
     padding-left: 1em;
     border-left-width: 5px;
-  
   }
-  .btn,
-  select {
-    font-size: 1.1em;
-    padding: 0.5em;
+}
+@media (max-width: 915px) {
+  .main-container {
+    width: 90%;
+    margin: auto;
   }
 }
 @media (min-width: 916px) and (max-width: 1440px) {
   .body-title {
-   margin-top: 1.5em;
-   border-width: 0.6em;
-   padding-left: 1em;
-   /* border-bottom: 2px solid var(--blue-light-2); */
+    border-width: 0.6em;
   }
-  .main-container{
-   width: 88%;
-   margin: auto;
-   display: flex;
-   flex-direction: column;
+  .main-container {
+    width: 88%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
   }
-  
 }

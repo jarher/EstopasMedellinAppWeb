@@ -1,25 +1,25 @@
-.form {
+.contact-form {
   border: 1px solid var(--grey-light);
 }
-.form input[type="submit"] {
+.contact-form input[type="submit"] {
   background-color: var(--blue-light);
   color: var(--font-light);
   transition: all 0.2s ease-in-out;
 }
- .form input[type="submit"]:active{
+ .contact-form input[type="submit"]:active{
    transform: scale(0.9);
  }
 .map-container {
   border-top: 1px solid var(--grey-light);
   padding-top: 1em;
 }
-.form,
-.form input,
-.form textarea {
+.contact-form,
+.contact-form input,
+.contact-form textarea {
   border-radius: 10px;
 }
-.form input,
-.form textarea {
+.contact-form input,
+.contact-form textarea {
   border: none;
   outline: none;
   background-color: var(--grey-light-5);
@@ -31,15 +31,13 @@
     width: 90%;
     margin: auto;
   }
-  .form-container .text-right {
-    font-size: 0.9em;
-  }
+
   .text-form {
     font-size: 0.9em;
     margin-top: 1em;
     text-align: justify;
   }
-  .form {
+  .contact-form {
     margin: 1em 0;
     padding: 1em;
   }
@@ -52,15 +50,15 @@
   label {
     display: none;
   }
-  .form input {
+  .contact-form input {
     height: 100%;
     padding-left: 3%;
   }
-  .form textarea {
+  .contact-form textarea {
     padding: 1em;
   }
 
-  .form input[type="submit"] {
+  .contact-form input[type="submit"] {
     width: 20%;
     padding: 0.5em;
   }
@@ -81,21 +79,17 @@
     width: 90%;
     margin: auto;
   }
-
-  .form-container .text-right {
-    font-size: 0.9em;
-  }
   .text-form {
     font-size: 0.9em;
     margin-top: 1em;
     text-align: justify;
   }
-  .form {
+  .contact-form {
     margin: 1em auto;
     padding: 1em;
     width: 70%;
   }
-  .form-wrapper {
+  .contact-form-wrapper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
@@ -104,14 +98,14 @@
   label {
     display: none;
   }
-  .form input {
+  .contact-form input {
     height: 100%;
     padding-left: 3%;
   }
-  .form textarea {
+  .contact-form textarea {
     padding: 1em;
   }
-  .form input[type="submit"] {
+  .contact-form input[type="submit"] {
     width: 20%;
     padding: 0.5em;
   }
@@ -123,10 +117,6 @@
   }
   iframe {
     width: 100%;
-    height: 100%;
-  }
-  .text-right {
-    text-align: left;
     padding-left: 2em;
   }
   .map-frame {
@@ -135,53 +125,31 @@
 }
 @media (min-width: 916px) and (max-width: 1440px) {
   .contact-container {
-    width: 75%;
+    width: 90%;
     margin: 2em auto 0 auto;
   }
-  .text-form,
-  .telephone-text,
-  .form-container .text-right {
-    width: 35%;
-  }
-  .form {
-    width: 47%;
-  }
-  .text-form,
-  .telephone-text,
-  .form-container .text-right {
-    float: left;
-  }
-  .form-container .text-right {
-    text-align: left;
-  }
-  .form {
+  .contact-form {
     float: right;
     box-sizing: border-box;
     padding: 2em;
+    width: 45%;
+  }
+  .text-form,
+  .map-container{
+    float: left;
+    width: 30%;
   }
   .text-form {
     font-size: 1.2em;
+    line-height: 1.5em;
   }
-  .telephone-text{
-    margin-top: 2em;
-    font-size: 1.1em;
-  }
-  .form-container .text-right{
-    margin-left: 2em;
-  }
-  .map-container .text-right {
-    text-align: left;
-  }
+
   .map-container {
-    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin-top: 2em;
-  }
-  .ubication,
-  .map-container .text-right {
-    width: 100%;
+    width: 30%;
   }
   .map-frame {
     margin: 2em 0;
@@ -192,13 +160,19 @@
     box-sizing: border-box;
   }
   .form-wrapper label{
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+    display: block;
+    font-size: 1.2em;
   }
   .form-wrapper{
     margin-bottom: 1em;
   }
-  .form input[type="submit"]{
+  .contact-form input[type="submit"]{
     padding: 0.5em;
     width: 20%;
+  }
+  .map-frame iframe{
+    width: 400px;
+    height: 400px;
   }
 }

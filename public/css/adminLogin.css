@@ -1,4 +1,3 @@
-.admin-login-wrapper {
-  width: 90%;
-  margin: auto;
+.admin-login-wrapper form{
+    margin-top:10%;
 }

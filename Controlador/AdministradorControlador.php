@@ -1,9 +1,9 @@
 <?php 
-    class AdministradorController{
+    class AdministradorControlador{
         private $model;
 
         public function __construct(){
-            $this->model = new AdministradorModel();
+            $this->model = new AdministradorModelo();
         }
 
         public function create ($admin_data = array()){

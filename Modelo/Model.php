@@ -39,7 +39,7 @@ abstract class Model{
 		$this->db_open();
 
 		$result = $this->conn->query($this->query);
-		while( $this->rows[] = $result->fetch_array(MYSQLI_ASSOC) );
+		while( $this->rows[] = $result->fetch_array(MYSQLI_ASSOC));
 		$result->close();
 
 		$this->db_close();

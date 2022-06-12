@@ -41,7 +41,7 @@
       width: 100%;
   }
 }
-@media (min-width: 916px) and (max-width: 1440px) {
+@media (min-width: 916px){
   .product-container {
     flex-direction: column;
     width: 57%;

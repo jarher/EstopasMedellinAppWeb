@@ -1,19 +1,52 @@
 .modal-container {
-  position: absolute;
+  position: fixed;
+  bottom: 0;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
   right: 0;
-  display: none;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
 }
 .news {
   background: white;
   width: 50%;
-  margin: 10% 5%;
+  margin: 5% 5%;
   border-radius: 20px;
   padding: 3%;
   box-sizing: border-box;
   float: right;
+}
+.close-btn {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/x-circle.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0 0 5px var(--blue-light-2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.close-btn:active {
+  transform: scale(0.9);
+}
+.close-news-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.form-newsletter-wrapper form input[type="submit"] {
+  background-color: var(--blue-light);
+  color: var(--font-light);
+}
+.news-title {
+  color: var(--blue-light);
+}
+.news hr {
+  border: 0.5px solid var(--blue-light-2);
 }
 footer {
   overflow-y: hidden;
@@ -30,10 +63,10 @@ footer a {
   transition: all 0.2s ease-in-out;
   background-color: #493e75;
 }
-#btn-subscribe:hover{
+#btn-subscribe:hover {
   background-color: #5e5290;
 }
-#btn-subscribe:active{
+#btn-subscribe:active {
   background-color: #493e75;
 }
 .copyright-wrapper {
@@ -44,16 +77,18 @@ footer a {
   display: flex;
   box-sizing: border-box;
 }
-.social-media-container li a > svg{
+.social-media-container li a > svg {
   transition: all 0.2s ease-in-out;
 }
-.social-media-container li a > svg{
-  fill: #3ca4ff;;
+.social-media-container li a > svg {
+  fill: #3ca4ff;
 }
-.social-media-container li a > svg:hover{
-  fill: #b4d9fa;;
+.social-media-container li a > svg:hover {
+  fill: #b4d9fa;
 }
-
+.warn-field {
+  color: var(--red-alert);
+}
 @media (max-width: 667px) {
   footer {
     flex-direction: column;
@@ -117,11 +152,8 @@ footer a {
   .social-media-container li a {
     font-size: 2em;
   }
-  .subscribe-wrapper {
-    order: 1;
-    border-bottom: 1px solid var(--grey-light-3);
-    padding: 3% 0 3%;
-    position: relative;
+  .news {
+    width: 90%;
   }
 }
 @media (min-width: 668px) and (max-width: 915px) {
@@ -217,14 +249,40 @@ footer a {
   .social-media-container {
     justify-content: space-evenly;
   }
-}
-@media (min-width: 916px) {
-  .social-media-container {
-    flex-direction: column;
-    align-items: center;
+  .subscribe-wrapper {
+    order: 1;
+    border-bottom: 1px solid var(--grey-light-3);
+    padding: 3% 0 3%;
+    position: relative;
+  }
+
+  .news-title {
+    padding: 0 2%;
+  }
+  .news p {
+    font-size: 0.9em;
+    margin: 5% 0;
+    padding-left: 5%;
+  }
+  #suscriber {
+    padding: 2%;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 5% auto;
+    border-radius: 10px;
+    background-color: var(--grey-light-5);
+  }
+  .form-newsletter-wrapper form input[type="submit"] {
+    width: 36%;
+    margin: auto;
+    padding: 3%;
+    border-radius: 10px;
+  }
+  .warn-field {
+    font-size: 0.8em;
   }
 }
-@media (min-width: 916px) and (max-width: 1440px) {
+@media (min-width: 916px) {
   footer {
     flex-direction: row;
     padding: 3% 5.6%;
@@ -233,7 +291,13 @@ footer a {
   .subscribe-wrapper {
     order: 1;
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+    padding: 3% 0 3%;
+    position: relative;
+  }
+  .social-media-container {
+    flex-direction: column;
+    align-items: center;
   }
   #btn-subscribe {
     padding: 1%;
@@ -323,6 +387,43 @@ footer a {
   .social-media-container li {
     margin-bottom: 1em;
   }
-}
-@media (min-width: 1441px) {
+  #btn-subscribe {
+    padding: 1%;
+    font-size: 1.2em;
+  }
+  #btn-subscribe:active {
+    transform: scale(0.9);
+  }
+  .social-media-container {
+    justify-content: space-evenly;
+  }
+  
+  .news-title {
+    padding: 0 2%;
+    font-size: 1.2em;
+  }
+  .news p {
+    font-size: 1em;
+    margin: 5% 0;
+  }
+  #suscriber {
+    padding: 2%;
+    width: 90%;
+    margin: 5% auto;
+    border-radius: 10px;
+    background-color: var(--grey-light-5);
+  }
+  .form-newsletter-wrapper form input[type="submit"] {
+    width: 22%;
+    padding: 2%;
+    margin-left: 5%;
+    border-radius: 10px;
+    font-size: 1em;
+  }
+  .warn-field {
+    font-size: 0.8em;
+  }
+  .form-newsletter-wrapper form label {
+    font-size: 0.8em;
+  }
 }

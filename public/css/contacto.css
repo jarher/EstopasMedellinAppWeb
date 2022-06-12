@@ -123,7 +123,7 @@
     margin-top: 1em;
   }
 }
-@media (min-width: 916px) and (max-width: 1440px) {
+@media (min-width: 916px) {
   .contact-container {
     width: 90%;
     margin: 2em auto 0 auto;
@@ -140,7 +140,7 @@
     width: 30%;
   }
   .text-form {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.5em;
   }
 

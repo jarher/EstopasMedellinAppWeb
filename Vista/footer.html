@@ -1,18 +1,22 @@
 </main>
-<div class="modal-container">
+<div class="modal-container hide opacity-0">
     <div class="news">
-        <div class="title">NEWSLETTER</div>
+        <div class="close-news-wrapper">
+            <button class="close-btn" id="close-modal"></button>
+        </div>
+        <div class="news-title">NEWSLETTER</div>
+        <hr/>
         <p>Reciba directamente en su correo electrónico alertas sobre nuevos productos, promociones y ofertas</p>
         <div class="form-newsletter-wrapper">
             <form method="POST">
                 <label for="suscriber">
-                    SU DIRECCIÓN DE CORREO ELECTRÓNICO*
+                    SU DIRECCIÓN DE CORREO ELECTRÓNICO *
                 </label>
                 <input type="email" name="suscriber" id="suscriber"
-                    placeholder="Introduzca su correo electrónico aquí*" />
+                    placeholder="Introduzca su correo electrónico aquí *" required/>
                 <input type="submit" value="Suscribirme" />
             </form>
-            <P>*Campo obligatorio</P>
+            <p class="warn-field">* Campo obligatorio</p>
         </div>
     </div>
 </div>
@@ -91,7 +95,8 @@
     </div>
 </footer>
 <!-- <script src="./public/js/bootstrap.min.js"></script> -->
-<!-- <script src="./public/js/carousel.js"></script> -->
+<script src="./public/js/carousel.js"></script>
+<script src="./public/js/close-modal.js"></script>
 <script src="./public/js/menu-collapse.js"></script>
 </body>
 

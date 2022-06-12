@@ -50,6 +50,12 @@ input {
   outline: none;
   width: 100%;
 }
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
 .body-title {
   color: var(--blue-light);
   border-left-color: var(--blue-light);
@@ -105,7 +111,6 @@ textarea:focus {
   box-shadow: 0 0 7px var(--blue-light-2);
   transition: all 0.2s ease-in-out;
 }
-
 @media (max-width: 667px) {
   .body-title {
     font-size: 0.6em;
@@ -130,7 +135,7 @@ textarea:focus {
     margin: auto;
   }
 }
-@media (min-width: 916px) and (max-width: 1440px) {
+@media (min-width: 916px) {
   .body-title {
     border-width: 0.6em;
   }

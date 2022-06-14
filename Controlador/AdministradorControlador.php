@@ -21,6 +21,7 @@
         public function delete ($admin_email = ''){
             return $this->model->delete($admin_email);
         }
+        
          public function __destruct () {
             $this;
         }

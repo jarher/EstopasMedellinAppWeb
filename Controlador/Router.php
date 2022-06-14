@@ -16,7 +16,7 @@
             $this->route = isset($_GET['r']) ? $_GET['r'] : 'home';
 
             $controlador = new VistaControlador();
-
+            
             switch($this->route){
 
                 case 'home':
@@ -31,8 +31,8 @@
                 case 'login':
                     if( $_SESSION['ok']){
                         $controlador = new VistaControlador();
-                        $controlador->load_view('admin-body.php');
-                    }else{
+                        $controlador->load_view('admin.php');
+                    }else{ 
                         if(!isset($_POST['admin-email']) and !isset($_POST['admin-password'])){
                             $controlador->load_view('login.php');
                         }else{
@@ -58,7 +58,7 @@
                         }
                     }
                     break;
-                default:
+                    default:
                     $controlador->load_view('error_404.html');
                     break;
             }

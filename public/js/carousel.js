@@ -51,7 +51,7 @@ function interval() {
 //cambio de slide
 function changeInterval() {
   if (!intervalId) {
-    intervalId = setInterval(interval, 7000);
+    intervalId = setInterval(interval, 5000);
   }
 }
 //detiene el slide
@@ -61,7 +61,7 @@ function stopSlideInterval() {
 }
 const slideshow_container = document.querySelector(".slideshow-container");
 //función que se activa por defecto al cargar por primera vez el documento
-intervalId = setInterval(interval, 7000);
+intervalId = setInterval(interval, 5000);
 //eventos del mouse, si entra el puntero del mouse en el contenedor de los slide se detiene el cambio de slide
 //si sale se reactiva de nuevo
 slideshow_container.addEventListener("mouseenter", stopSlideInterval);
@@ -87,6 +87,5 @@ data_slides.forEach((e) => {
         e.classList.remove("control-active");
       }
     });
-    console.log(index);
   });
 });

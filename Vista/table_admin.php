@@ -12,36 +12,6 @@
     //$admin->delete('betty@gmail.com');
     //var_dump($admin_data);
 ?>
-
-<div class="body-title">
-    <h1>
-        Panel administrador
-    </h1>
-</div>
-<hr />
-<div class="toolbar">
-    <div class="user-options">
-        <select name="user-options" id="user-options">
-            <option value="create">Crear nuevo mensaje</option>
-            <option value="viewMs" selected>Ver mensajes de usuarios</option>
-            <option value="viewUser">Ver usuarios</option>
-            <option value="viewProducts">Ver productos</option>
-            <option value="viewAdmin">Ver administradores</option>
-        </select>
-    </div>
-    <div class="notification-bar">
-        <button id="notification">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill"
-                viewBox="0 0 16 16">
-                <path
-                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
-            </svg>
-        </button>
-        <button id="close-session" class="btn btn-alert">
-            Cerrar sesión
-        </button>
-    </div>
-</div>
 <div class="panel-wrapper " id="panel-admin">
     <div class="title-panel">Usuarios administradores</div>
     <div class="table">
@@ -54,7 +24,10 @@
         </div>
         <div class="tbody">
             <?php 
-                for($n = 0; $n < count($admin_data); $n++){
+                if(empty($admin_data)){
+                    print ('<p>No hay usuarios administradores</p>');
+                }else{
+                    for($n = 0; $n < count($admin_data); $n++){
                     echo '<div class="tr">
                             <div class="tc">
                                 <span class="title-tc">Nombre: </span>
@@ -69,7 +42,7 @@
                                     <div class="content-tc-name">' . $admin_data[$n]["password"]. '</div>
                             </div>
                             <div class="tc row tc-border">
-                                <button class="btn btn-editar">
+                                <button class="btn btn-edit">
                                     <span class="btn-text">Editar usuario
                                     </span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill"
@@ -80,7 +53,7 @@
                                 </button>
                             </div>
                             <div class="tc tc-border">
-                                <button class="btn btn-eliminar">
+                                <button class="btn btn-delete">
                                     <span class="btn-text">Eliminar usuario</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill"
                                         viewBox="0 0 16 16">
@@ -90,7 +63,9 @@
                                 </button>
                             </div>
                         </div>';
+                    }
                 }
+                
             ?>
 
     </div>

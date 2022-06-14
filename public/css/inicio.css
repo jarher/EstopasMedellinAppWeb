@@ -8,7 +8,7 @@
   left: 0;
   background-color: transparent;
   opacity: 0;
-  transition: all 2s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .slideshow-controllers {
   position: absolute;
@@ -45,7 +45,7 @@
   display: block;
 }
 .text-slideshow {
-  color: var(--font-light);
+  color: #2574db;
 }
 .img-container img {
   width: 100%;
@@ -65,7 +65,7 @@
 }
 @media (max-width: 667px) {
   .slideshow-container {
-    height: 40vh;
+    height: 43vh;
   }
   .texts-container {
     top: 2em;
@@ -177,5 +177,8 @@
     font-size: 1.7em;
     display: flex;
     align-items: center;
+  }
+  .slideshow-controllers{
+    margin-top: 3%;
   }
 }

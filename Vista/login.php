@@ -1,4 +1,4 @@
-<div class="flex-column flex-column-center admin-login-wrapper">
+<div class="admin-login-wrapper">
     <div class="body-title">
         <h1>
             Ingreso al panel de control
@@ -13,7 +13,7 @@
             <label for="admin-password"></label>
             <input type="password" name="admin-password" id="admin-password" placeholder="Contraseña">
         </div>
-            <input type="submit" class="button-submit" value="Ingresar">
+            <input type="submit" class="btn-primary" value="Ingresar">
     </form>
 </div>
 <?php if(isset($_GET['error'])){ ?>

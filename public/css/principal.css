@@ -45,13 +45,19 @@ form {
 form {
   flex-direction: column;
 }
-input {
+input,
+textarea{
   border: none;
   outline: none;
   width: 100%;
+  box-sizing: border-box;
+  padding: 3%;
 }
 a {
   text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 ul {
   list-style-type: none;
@@ -80,12 +86,13 @@ ul {
   display: flex;
   align-items: center;
 }
-.btn:hover {
-  cursor: pointer;
-}
 .btn:active {
   border: none;
   outline: none;
+}
+.btn-primary,
+.btn-alert{
+  color: var(--font-light);
 }
 .btn-primary {
   background-color: var(--blue-light) !important;
@@ -111,10 +118,12 @@ textarea:focus {
   box-shadow: 0 0 7px var(--blue-light-2);
   transition: all 0.2s ease-in-out;
 }
+
 @media (max-width: 667px) {
   .body-title {
     font-size: 0.6em;
-    border-left-width: 5px;
+    border: none;
+    text-align: center;
   }
   .row {
     display: flex;
@@ -144,5 +153,8 @@ textarea:focus {
     margin: auto;
     display: flex;
     flex-direction: column;
+  }
+  label{
+    display: block;
   }
 }

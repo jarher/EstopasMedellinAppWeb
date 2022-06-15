@@ -5,7 +5,7 @@
             foreach ($admin_data as $key => $value){
                 $$key = $value;
             }
-            $this->query = "INSERT INTO administrador (nombre, email, password) VALUES ('$admin_name', '$admin_email', '$admin_password'";
+            $this->query = "INSERT INTO administrador (nombre, email, password) VALUES ('$admin_name', '$admin_email', '$admin_password')";
             $this->set_query();
         }
 

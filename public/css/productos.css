@@ -6,6 +6,7 @@
   box-sizing: border-box;
   box-shadow: 3px 3px 5px var(--grey-light-4);
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 .descriptions-product div,
 .product-card div:nth-child(3) {
@@ -17,6 +18,10 @@
 }
 .desc-value {
   text-indent: 1.2em;
+}
+.product-card:hover{
+  transform: scale(1.03);
+  box-shadow: 5px 5px 10px var(--grey-light-3);
 }
 @media (max-width: 667px) {
   .product-container {
@@ -105,7 +110,7 @@
   .product-card {
     width: 28%;
     margin-right: 5%;
-    margin-top: 2%;
+    margin-top: 3%;
     padding: 2%;
   }
   .product-img-wrapper {

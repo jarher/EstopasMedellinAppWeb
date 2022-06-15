@@ -58,7 +58,8 @@
                         }
                     }
                     break;
-                    default:
+                
+                default:
                     $controlador->load_view('error_404.html');
                     break;
             }

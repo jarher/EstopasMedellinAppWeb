@@ -1,0 +1,19 @@
+.error-wrapper{
+    display: flex;
+    justify-content: flex-start;
+}
+.error-img-wrapper{
+    width: 30%;
+}
+.error-text{
+    width: 30%;
+    color:var(--blue-light);
+    font-size: 2em;
+    font-weight: 600;
+}
+.error-img-wrapper svg{
+    height: 150px;
+    width: 150px;
+    fill: var(--blue-light);
+}
+

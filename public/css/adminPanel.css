@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 .btn-edit svg,
-.btn-delete svg{
+.btn-delete svg {
   fill: var(--font-light);
 }
 .btn-create-wrapper {
@@ -65,9 +65,18 @@ hr {
 .btn-text {
   color: var(--font-light);
 }
-.title-panel{
-  color:var(--blue-light);
+.title-panel {
+  color: var(--blue-light);
   font-weight: 600;
+}
+p.text-success {
+  margin-top: 3%;
+  padding: 2%;
+  font-size: 1.5em;
+  color: var(--blue-light);
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
 }
 @media (max-width: 667px) {
   .panel-wrapper,
@@ -102,9 +111,9 @@ hr {
     padding: 2%;
     border-radius: 0;
   }
-  .title-panel{
-   text-align: center; 
-   font-size: 1.1em;
+  .title-panel {
+    text-align: center;
+    font-size: 1.1em;
     margin-bottom: 1em;
   }
   .theader {
@@ -149,7 +158,7 @@ hr {
     border-radius: 0;
     text-align: center !important;
   }
-  .tc-submit .btn-primary{
+  .tc-submit .btn-primary {
     width: 100%;
   }
 }
@@ -169,10 +178,50 @@ hr {
     padding: 4%;
   }
 }
+@media (min-width: 668px) and (max-width: 915px) {
+  .theader {
+    display: none;
+  }
+  .tbody,
+  .tr {
+    display: flex;
+  }
+  .tbody {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3%;
+  }
+  .tr,
+  .tc {
+    border: 1px solid var(--grey-light-3);
+    border-radius: 10px;
+  }
+  .tc:nth-child(4), 
+  .tc:nth-child(5){
+    border: none;
+    padding: 0;
+  }
+  .tr {
+    width: 45%;
+    padding: 2%;
+    flex-direction: column;
+    margin-bottom: 3%;box-sizing: border-box;
+  }
+  .tc {
+    border: 1px solid var(--grey-light-3);
+    margin-bottom: 3%;
+    padding: 2%;
+  }
+  .content-tc{
+    padding: 2%;
+    font-size: 0.9em;
+  }
+}
 
 @media (min-width: 916px) {
-  .panel-wrapper{
-    min-height : calc(100vh - 77.44px);
+  .panel-wrapper {
+    min-height: calc(100vh - 77.44px);
   }
   .toolbar,
   .panel-wrapper {
@@ -215,7 +264,7 @@ hr {
     padding: 0.5em;
     margin-top: 1em;
   }
-   .theader,
+  .theader,
   .tr,
   .th,
   .tc {
@@ -256,7 +305,28 @@ hr {
     border: 1px solid var(--blue-light-3);
   }
   .btn-edit,
-  .btn-delete{
+  .btn-delete {
     padding: 3%;
+  }
+  .admin-crud-form{
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 230px);
+    align-items: center;
+  }
+  .admin-crud-form form{
+    padding: 3%;
+    border: 1px solid var(--grey-light-3);
+    border-radius: 10px;
+    font-size: 1.3em;
+  }
+  .admin-crud-form form label,
+  .admin-crud-form form input{
+    margin: 1% 0;
+  }
+  .admin-crud-form form input[type="submit"]{
+    background-color: var(--blue-light);
+    color: var(--font-light);
+    font-size: 1em;
   }
 }

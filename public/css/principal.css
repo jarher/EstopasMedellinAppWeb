@@ -52,6 +52,7 @@ textarea{
   width: 100%;
   box-sizing: border-box;
   padding: 3%;
+  background-color: var(--grey-light)!important;
 }
 a {
   text-decoration: none;

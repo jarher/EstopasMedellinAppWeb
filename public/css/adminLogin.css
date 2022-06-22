@@ -42,10 +42,14 @@
     .admin-login-wrapper {
     height: calc(100vh - 77.45px);
   }
-  .admin-login-wrapper form {
+  .admin-login-wrapper form,
+  .admin-crud-form form {
     width: 30%;
     margin: 15% auto;
     padding:1% 2%;
+  }
+  .admin-login-wrapper form input[type="submit"]{
+    margin-top:5%;
   }
   .form-wrapper{
       margin-bottom: 2%;

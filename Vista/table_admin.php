@@ -1,16 +1,8 @@
 <?php 
     //tabla para gestionar los usuarios administradores del sistema
-    //require_once('./Controlador/AdministradorControlador.php');
     $admin = new AdministradorControlador();
+    
     $admin_data = $admin->read();
-    //$update_admin = array(
-    //    'admin_name' => 'jaimes',
-    //    'admin_email' =>'jaime@gmail.com',
-    //    'admin_password' =>'asdfgh'
-    //);
-    //$admin->update($update_admin);
-    //$admin->delete('betty@gmail.com');
-    //var_dump($admin_data);
 ?>
 <div class="panel-wrapper " id="panel-admin">
     <div class="title-panel">Usuarios administradores</div>
@@ -43,8 +35,10 @@
                             </div>
                             <div class="tc row tc-border">
                                 <form method="POST">
-                                    <input type="hidden" name="r" value="admin-edit" />
-                                    <input type="hidden" name="admin-email" value="' . $admin_data[$n]["email"] . '" /> 
+                                    <input type="hidden" name="r" value="edit-admin-form" />
+                                    <input type="hidden" name="admin_name" value="' . $admin_data[$n]["nombre"] . '" /> 
+                                    <input type="hidden" name="admin_email" value="' . $admin_data[$n]["email"] . '" /> 
+                                    <input type="hidden" name="admin_password" value="' . $admin_data[$n]["password"] . '" /> 
                                     <button class="btn btn-edit" type="submit">
                                         <span class="btn-text">Editar usuario
                                         </span>
@@ -59,7 +53,7 @@
                             </div>
                             <div class="tc row tc-border">
                                 <form method="POST">
-                                    <input type="hidden" name="r" value="admin-delete" />
+                                    <input type="hidden" name="r" value="delete-admin-form" />
                                     <input type="hidden" name="admin-email" value="' . $admin_data[$n]["email"] . '" />
                                     <button class="btn btn-delete" type="submit">
                                         <span class="btn-text">Eliminar usuario</span>
@@ -81,9 +75,9 @@
     </div>
     <div class="btn-create-wrapper">
         <form method="POST">
-            <input type="hidden" name="r" value="admin-add"/>
+            <input type="hidden" name="r" value="admin-add-form"/>
             <input type="hidden" name="set" value="create" />
-            <input type="submit" value="Crear usuario administrador" class="btn btn-primary" id="create-user-admin"/>
+            <input type="submit" value="Crear usuario administrador" class="btn btn-primary btn-submit"/>
         </form>
     </div>
 </div>

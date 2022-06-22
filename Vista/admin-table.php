@@ -1,17 +1,3 @@
-<?php 
-    //tabla para gestionar los usuarios administradores del sistema
-    require_once('./Controlador/AdministradorController.php');
-    $admin = new AdministradorController();
-    $admin_data = $admin->read();
-    //$update_admin = array(
-    //    'admin_name' => 'jaimes',
-    //    'admin_email' =>'jaime@gmail.com',
-    //    'admin_password' =>'asdfgh'
-    //);
-    //$admin->update($update_admin);
-    //$admin->delete('betty@gmail.com');
-    //var_dump($admin_data);
-?>
 <div class="panel-wrapper " id="panel-admin">
     <div class="title-panel">Usuarios administradores</div>
     <div class="table">

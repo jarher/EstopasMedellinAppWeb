@@ -1,25 +1,52 @@
+<?php 
+    $enviar_suscripcion = new UsuariosControlador();
+    
+    $message_success = '<p class="text-success">Gracias, ¡Usted se ha suscrito satisfactoriamente!</p>';
+    
+    $message_error = '<p class="text-alert">lamentablemente ha ocurrido un error, inténtelo de nuevo más tarde</p>';
+    
+    
+?>
 </main>
-<div class="modal-container hide opacity-0">
-    <div class="news">
-        <div class="close-news-wrapper">
-            <button class="close-btn" id="close-modal"></button>
-        </div>
-        <div class="news-title">NEWSLETTER</div>
-        <hr/>
-        <p>Reciba directamente en su correo electrónico alertas sobre nuevos productos, promociones y ofertas</p>
-        <div class="form-newsletter-wrapper">
-            <form method="POST">
-                <label for="suscriber">
-                    SU DIRECCIÓN DE CORREO ELECTRÓNICO *
-                </label>
-                <input type="email" name="suscriber" id="suscriber"
-                    placeholder="Introduzca su correo electrónico aquí *" required/>
-                <input type="submit" value="Suscribirme" />
-            </form>
-            <p class="warn-field">* Campo obligatorio</p>
+    <div class="modal-container hide opacity-0">
+        <div class="news">
+            <div class="close-news-wrapper">
+                <button class="close-btn" id="close-modal"></button>
+            </div>
+            <?php 
+                if(isset($_POST['news-submit'])){
+
+                    $suscriptor = array(
+                        'suscribe_email' => $_POST['suscriber']
+                    );
+                    
+                    if($enviar_suscripcion->create($suscriptor)){
+                        print($message_success);
+                    }else{
+                        print($message_error);
+                    }
+                } else{
+                    print('
+                        <div class="news-title">SUSCRIPCIÓN</div>
+                        <hr/>
+                        <p>Reciba directamente en su correo electrónico alertas sobre nuevos productos, promociones y ofertas</p>
+                        <div class="form-newsletter-wrapper">
+                            <form method="POST">
+                                <label for="suscriber">
+                                    SU DIRECCIÓN DE CORREO ELECTRÓNICO *
+                                </label>
+                                <input type="email" name="suscriber" id="suscriber"
+                                    placeholder="Introduzca su correo electrónico aquí *" required/>
+                                <input type="submit" value="Suscribirme" name="news-submit" class="btn-primary"/>
+                            </form>
+                            <p class="warn-field">* Campo obligatorio</p>
+                        </div>
+                    ');
+                }
+            ?>
+            
         </div>
     </div>
-</div>
 </div>
 <footer>
     <div class="subscribe-wrapper">
@@ -98,6 +125,7 @@
 <script src="./public/js/carousel.js"></script>
 <script src="./public/js/close-modal.js"></script>
 <script src="./public/js/menu-collapse.js"></script>
+<script src="./public/js/redirect.js"></script>
 </body>
 
 </html>

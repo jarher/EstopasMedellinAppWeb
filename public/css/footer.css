@@ -38,10 +38,6 @@
   display: flex;
   justify-content: flex-end;
 }
-.form-newsletter-wrapper form input[type="submit"] {
-  background-color: var(--blue-light);
-  color: var(--font-light);
-}
 .news-title {
   color: var(--blue-light);
 }
@@ -273,7 +269,7 @@ footer a {
     background-color: var(--grey-light-5);
   }
   .form-newsletter-wrapper form input[type="submit"] {
-    width: 36%;
+    width: 90%;
     margin: auto;
     padding: 3%;
     border-radius: 10px;
@@ -285,7 +281,7 @@ footer a {
 @media (min-width: 916px) {
   footer {
     flex-direction: row;
-    padding: 3% 5.6%;
+    padding: 2% 5.6%;
     flex-wrap: wrap;
   }
   .subscribe-wrapper {

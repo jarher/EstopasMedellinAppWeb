@@ -1,10 +1,12 @@
+.slideshow-container
+{background-color: var(--font-light);
+}
 .slideshow-container,
 .service-description-wrapper {
   position: relative;
 }
 .slide {
   position: absolute;
-  top: 0;
   left: 0;
   background-color: transparent;
   opacity: 0;
@@ -32,20 +34,6 @@
 }
 .control-active {
   background-color: var(--blue-light-2);
-}
-.button-slideshow-link {
-  background-color: var(--blue-light) !important;
-  border-radius: 10px;
-  width: auto;
-}
-.button-slideshow-link a {
-  color: var(--font-light);
-  height: 100%;
-  width: 100%;
-  display: block;
-}
-.text-slideshow {
-  color: #2574db;
 }
 .img-container img {
   width: 100%;
@@ -76,9 +64,6 @@
   .text-slideshow {
     font-size: 0.8em;
   }
-  .button-slideshow-link {
-    padding: 5px;
-  }
   .title-product-container {
     background-color: var(--gray-light);
     padding: 1em;
@@ -102,13 +87,9 @@
     width: 50%;
     padding: 1em;
   }
-  .text-slideshow,
-  .button-slideshow-link {
+  .text-slideshow
+   {
     font-size: 1em;
-  }
-  .button-slideshow-link {
-    padding: 0.8em;
-    margin-top: 2em;
   }
   .texts-container {
     position: absolute;
@@ -117,16 +98,18 @@
 @media (min-width: 916px) {
   .slideshow-container {
     width: 95%;
-    margin: 5% auto;
+    margin: 4% auto;
     box-sizing: border-box;
-    padding-top: 2em;
     padding-bottom: 2em;
-    height: 70vh;
+    height: 75vh;
+    box-shadow: 0 0 10px var(--grey-light-3);
   }
   .slide {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    top: 45px;
+    bottom: 10px;
   }
   .img-container {
     width: 55%;
@@ -142,21 +125,16 @@
     align-items: center;
     padding-right: 2em;
   }
-  .text-slideshow,
-  .button-slideshow-link {
+  .text-slideshow
+   {
     margin-left: 30%;
   }
   .text-slideshow {
     width: 70%;
-    font-size: 1.2em;
     color: var(--blue-light);
     box-sizing: border-box;
-  }
-  .button-slideshow-link {
-    font-size: 1.1em;
-    padding: 0.5em;
-    margin-top: 1em;
-    align-self: flex-start;
+    font-size: 2em;
+    text-shadow: 0 0 10px var(--blue-light-2);
   }
   .service-description-wrapper {
     padding: 4% 0;
@@ -179,6 +157,6 @@
     align-items: center;
   }
   .slideshow-controllers{
-    margin-top: 3%;
+    margin: 3% 0 2%;
   }
 }

@@ -22,6 +22,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  background-color: var(--font-light);
 }
 #search-form {
   border: 1px solid var(--grey-light);
@@ -40,6 +41,7 @@
 .banner a {
   display: flex;
   align-items: center;
+  width: 95%;
 }
 .btn-search {
   color: var(--blue-light) !important;
@@ -67,7 +69,6 @@
   .banner {
     width: 100%;
     display: flex;
-    justify-content: center;
   }
   .main-nav {
     position: absolute;
@@ -102,9 +103,10 @@
     font-size: 2em;
   }
   .banner {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
+    margin-left: 3%;
   }
   .main-nav {
     position: absolute;

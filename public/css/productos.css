@@ -7,6 +7,7 @@
   box-shadow: 3px 3px 5px var(--grey-light-4);
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
+  background-color: var(--font-light);
 }
 .descriptions-product div,
 .product-card div:nth-child(3) {
@@ -86,6 +87,7 @@
 @media (min-width: 916px) {
   .product-container {
     margin-bottom: 2%;
+    justify-content: flex-start!important;
   }
   .product-title {
     font-size: 1.2em;
@@ -97,7 +99,6 @@
   .product-card > div:nth-child(2) {
     display: flex;
   }
-  .product-container,
   .product-card > div:nth-child(2) {
     width: 100%;
     justify-content: space-between;

@@ -28,7 +28,7 @@ abstract class Model{
 	private function db_close() {
 		$this->conn->close();
 	}
-
+	
 	protected function set_query() {
 		$this->db_open();
 		$this->conn->query($this->query);

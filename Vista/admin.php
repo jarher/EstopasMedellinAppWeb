@@ -8,7 +8,6 @@
     <div class="user-options">
         <form method="POST">
             <select name="r" id="user-options" onchange="this.form.submit()">
-                <option value="createMs" <?php if(!empty($_POST['r'])) ($_POST['r'] == 'createMs')? print 'selected' : null ?>>Crear nuevo mensaje</option>
                 <option value="viewMs" <?php if(!empty($_POST['r'])) ($_POST['r'] == 'viewMs') ? print 'selected' : print 'selected'?>>Ver mensajes de usuarios</option>
                 <option value="viewUser" <?php if(!empty($_POST['r'])) if($_POST['r'] == 'viewUser') print'selected' ?>>Ver suscriptores</option>
                 <option value="viewProducts" <?php if(!empty($_POST['r'])) if($_POST['r'] == 'viewProducts') print'selected'?>>Ver productos</option>
@@ -24,25 +23,37 @@
 </div>
 <?php 
     $controlador = new VistaControlador();
-    var_dump($_POST['r']);
+    
     if(isset($_POST['r'])){
-        if($_POST['r'] == 'createMs'){
-            $controlador->load_view('table_create_message.php');
-        }else if($_POST['r'] == 'viewMs'){
-            $controlador->load_view('table_messages.php');
+        if($_POST['r'] == 'viewMs'){
+            $controlador->load_view('table_user_messages');
         }else if($_POST['r'] == 'viewUser'){
-            $controlador->load_view('table_users.php');
+            $controlador->load_view('table_users');
         }else if($_POST['r'] == 'viewProducts'){
-            $controlador->load_view('table_products.php');
+            $controlador->load_view('table_products');
         }else if($_POST['r'] == 'viewAdmin'){
-            $controlador->load_view('table_admin.php');
-        }else if($_POST['r'] == 'admin-add'){
-            $controlador->load_view('crud-administrador.php');
-        }else if($_POST['r'] == 'create-admin'){
-            $controlador->load_view('crud-administrador.php');
+            $controlador->load_view('table_admin');
+        }else if($_POST['r'] == 'admin-add-form' 
+            || $_POST['r'] == 'create-admin'
+            || $_POST['r'] == 'edit-admin'
+            || $_POST['r'] == 'update-admin'
+            || $_POST['r'] == 'delete-admin'
+            || $_POST['r'] == 'eliminate-admin'
+            || $_POST['r'] == 'product-add-form'
+            || $_POST['r'] == 'create-product'
+            || $_POST['r'] == 'edit-product-form'
+            || $_POST['r'] == 'update-product'
+            || $_POST['r'] == 'delete-product-form'
+            || $_POST['r'] == 'eliminate-product'
+            || $_POST['r'] == 'delete-user-form'
+            || $_POST['r'] == 'eliminate-user'
+            || $_POST['r'] == 'delete-message-form'
+            || $_POST['r'] == 'eliminate-message'){
+                
+            $controlador->load_view('crud-administrador');
         }
     }else{
-        $controlador->load_view('table_messages.php');
+        $controlador->load_view('table_user_messages');
     }
     
 ?>

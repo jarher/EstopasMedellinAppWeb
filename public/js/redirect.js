@@ -1,6 +1,6 @@
-const redirect_user_admin = () => {
+const redirect = (index) => {
     setTimeout(function () {
-      document.querySelector("#user-options").options[4].selected = "selected";
+      document.querySelector("#user-options").options[index].selected = "selected";
       document.querySelector(".user-options form").submit();
     }, 3000);
 }

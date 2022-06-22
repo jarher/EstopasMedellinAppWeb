@@ -20,21 +20,21 @@
             switch($this->route){
 
                 case 'home':
-                    $controlador->load_view('home.html');
+                    $controlador->load_view('home');
                     break;
                 case 'productos':
-                    $controlador->load_view('productos.html');
+                    $controlador->load_view('productos');
                     break;
                 case 'contacto':
-                    $controlador->load_view('contacto.html');
+                    $controlador->load_view('contacto');
                     break;
-                case 'login':
+                case 'administrador':
                     if( $_SESSION['ok']){
                         $controlador = new VistaControlador();
-                        $controlador->load_view('admin.php');
+                        $controlador->load_view('admin');
                     }else{ 
                         if(!isset($_POST['admin-email']) and !isset($_POST['admin-password'])){
-                            $controlador->load_view('login.php');
+                            $controlador->load_view('login');
                         }else{
                             $admin_sesion = new SesionControlador();
 
@@ -42,7 +42,7 @@
                             
                             if(empty($sesion)) {
                                 $login_form = new VistaControlador();
-                                $login_form->load_view('login.php');
+                                $login_form->load_view('login');
                                 header('Location: ./?error=El usuario ' . $_POST['email'] .' Y la contraseña no coinciden');
                             }else{
                                 $_SESSION['ok'] = true;
@@ -53,14 +53,14 @@
                                     $_SESSION['password'] = $row['password'];
                                 }
 
-                                header('Location: ./login');
+                                header('Location: ./administrador');
                             }
                         }
                     }
                     break;
                 
                 default:
-                    $controlador->load_view('error_404.html');
+                    $controlador->load_view('error_404');
                     break;
             }
         }

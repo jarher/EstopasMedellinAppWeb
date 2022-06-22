@@ -1,4 +1,25 @@
-<div class="body-title">
+<?php 
+   
+    if(isset($_POST['submit'])){
+   
+        $enviar_mensaje = new MensajesControlador();
+        
+        $mensaje = array(
+            'email_contact' => $_POST['email_contact'],
+            'name_contact' => $_POST['name_contact'],
+            'tel_contact' => $_POST['tel_contact'],
+            'subject_contact' => $_POST['subject_contact'],
+            'message_contact' => $_POST['message_contact'],
+        );
+
+        $enviar_mensaje->create($mensaje);
+
+        printf('<p class="text-success">Gracias <b>%s</b>, ¡Su mensaje ha sido enviado con éxito!</p>', $_POST['name_contact']);
+        
+    }else{
+   
+        print(
+            '<div class="body-title">
     <h1>
         Contacto
     </h1>
@@ -11,7 +32,8 @@
             en comprar nuestros productos.
         </p>
         
-        <form action="" class="contact-form">
+        <form class="contact-form" method="POST">
+            <input type="hidden"  />
             <div class="form-wrapper">
                 <label for="name_contact">Nombre:</label>
                 <input type="text" name="name_contact" id="name_contact" placeholder="Ingrese su nombre" required>
@@ -34,7 +56,7 @@
                     placeholder="Ingrese su inquetud o consulta" required></textarea>
             </div>
 
-            <input type="submit" value="Enviar">
+            <input type="submit" name="submit" value="Enviar" class="btn-primary">
         </form>
         <div class="map-container">
             <div>
@@ -51,4 +73,8 @@
             </div>
         </div>
     </div>
-</div>
+</div>'
+        );
+    }
+?>
+

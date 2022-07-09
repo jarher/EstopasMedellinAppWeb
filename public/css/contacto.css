@@ -1,14 +1,11 @@
-.contact-form {
-  border: 1px solid var(--grey-light);
-}
 .contact-form input[type="submit"] {
   background-color: var(--blue-light);
   color: var(--font-light);
   transition: all 0.2s ease-in-out;
 }
- .contact-form input[type="submit"]:active{
-   transform: scale(0.9);
- }
+.contact-form input[type="submit"]:active {
+  transform: scale(0.9);
+}
 .map-container {
   border-top: 1px solid var(--grey-light);
   padding-top: 1em;
@@ -17,6 +14,13 @@
 .contact-form input,
 .contact-form textarea {
   border-radius: 10px;
+  margin-top: 1%;
+}
+.alert-success-container {
+  height: calc(100vh - 75.22px);
+}
+iframe{
+  width: 100%;
 }
 @media (max-width: 667px) {
   .contact-container,
@@ -52,7 +56,7 @@
   }
 
   .contact-form input[type="submit"] {
-    width: 100%!important;
+    width: 100% !important;
     padding: 0.5em;
   }
   .map-container {
@@ -62,12 +66,11 @@
     height: 50vh;
   }
   iframe {
-    width: 100%;
     height: 100%;
   }
 }
 @media (min-width: 668px) and (max-width: 915px) {
-  .contact-container{
+  .contact-container {
     min-height: 100vh;
   }
   .contact-container,
@@ -121,19 +124,20 @@
 }
 @media (min-width: 916px) {
   .contact-container {
-    width: 90%;
     margin: 2em auto 0 auto;
+    position: relative;
   }
   .contact-form {
     float: right;
     box-sizing: border-box;
     padding: 2em;
-    width: 45%;
+    width: 43%;
   }
   .text-form,
-  .map-container{
+  .map-container {
     float: left;
-    width: 30%;
+    width: 45%;
+    text-align: justify;
   }
   .text-form {
     font-size: 1em;
@@ -145,25 +149,33 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2em;
-    width: 30%;
+    width: 45%;
   }
   .map-frame {
     margin: 2em 0;
   }
-  .form-wrapper label{
-    margin-bottom: 1em;
+  .form-wrapper label {
     display: block;
     font-size: 1.2em;
   }
-  .form-wrapper{
+  .form-wrapper {
     margin-bottom: 1em;
   }
-  .contact-form input[type="submit"]{
+  .contact-form input[type="submit"] {
     padding: 0.5em;
     width: 20%;
   }
-  .map-frame iframe{
-    width: 400px;
+  iframe {
     height: 400px;
   }
+  .line-middle {
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    width: 1px;
+    background: var(--grey-light);
+    margin: auto;
+}
 }

@@ -1,4 +1,4 @@
-<div class="panel-wrapper " id="panel-message">
+<!-- <div class="panel-wrapper " id="panel-message">
       <div class="title-panel">Enviar mensaje a suscriptores</div>
       <div class="table">
         <div class="theader">
@@ -39,4 +39,4 @@
                 </div>
               </div>
         </div>
-    </div>
+    </div> -->

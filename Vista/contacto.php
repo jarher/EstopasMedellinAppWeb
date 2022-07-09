@@ -1,8 +1,9 @@
 <?php 
+    $enviar_mensaje = new MensajesControlador();
+    
+    if(!empty($_POST['message-submit'])){
    
-    if(isset($_POST['submit'])){
-   
-        $enviar_mensaje = new MensajesControlador();
+       
         
         $mensaje = array(
             'email_contact' => $_POST['email_contact'],
@@ -14,17 +15,28 @@
 
         $enviar_mensaje->create($mensaje);
 
-        printf('<p class="text-success">Gracias <b>%s</b>, ¡Su mensaje ha sido enviado con éxito!</p>', $_POST['name_contact']);
+        printf('
+        <div class="modal-container">
+            <div class="news">
+                <div class="close-news-wrapper">
+                    <button class="close-btn" id="close-modal"></button>
+                </div>
+                <div class="news-title">Gracias <b>%s</b></div>
+                    <hr/>
+                    <p class="text-success">¡Su mensaje ha sido enviado con éxito!</p>
+            </div>
+        </div>', $_POST['name_contact']);
         
-    }else{
-   
-        print(
-            '<div class="body-title">
+        $_POST['message-submit'] = null;
+    }
+?>
+<div class="body-title">
     <h1>
         Contacto
     </h1>
 </div>
 <div class="contact-container">
+    <div class="line-middle"></div>
     <div class="form-container">
         <p class="text-form">
             Gracias por confiar en nosotros. Por favor diligencie este formulario y háganos saber sus dudas,
@@ -32,8 +44,8 @@
             en comprar nuestros productos.
         </p>
         
-        <form class="contact-form" method="POST">
-            <input type="hidden"  />
+        <form class="form contact-form" method="POST">
+           
             <div class="form-wrapper">
                 <label for="name_contact">Nombre:</label>
                 <input type="text" name="name_contact" id="name_contact" placeholder="Ingrese su nombre" required>
@@ -52,11 +64,11 @@
             </div>
             <div class="form-wrapper">
                 <label for="message_contact">Mensaje:</label>
-                <textarea name="message_contact" id="message_contact" cols="30" rows="8"
+                <textarea name="message_contact" id="message_contact" cols="20" rows="5"
                     placeholder="Ingrese su inquetud o consulta" required></textarea>
             </div>
 
-            <input type="submit" name="submit" value="Enviar" class="btn-primary">
+            <input type="submit" name="message-submit" value="Enviar" class="btn-primary">
         </form>
         <div class="map-container">
             <div>
@@ -73,8 +85,4 @@
             </div>
         </div>
     </div>
-</div>'
-        );
-    }
-?>
-
+</div>

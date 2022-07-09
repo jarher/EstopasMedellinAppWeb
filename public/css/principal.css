@@ -27,11 +27,6 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
 }
-body,
-.container,
-.main-container {
-  position: relative;
-}
 .container{
   background-color: var(--grey-light-6);
 }
@@ -42,19 +37,72 @@ img {
   width: 100%;
   height: auto;
 }
-footer,
-form {
-  display: flex;
-}
 form {
   flex-direction: column;
+  
+}
+.form{
+  border: 1px solid var(--grey-light);
+}
+body,
+.container,
+.main-container,
+.main-header,
+.close-news-wrapper,
+.carousel,
+.carousel-inner,
+.carousel-item {
+  position: relative;
+}
+
+footer,
+form,
+.main-header,
+.service-wrapper,
+.product-container,
+.banner a,
+.carousel-indicators,
+.toolbar,
+.user-options,
+.error-wrapper, 
+.close-news-wrapper,
+#btn-subscribe,
+.social-media-container,
+.social-media-container li,
+.btn,
+.tr {
+  display: flex;
+}
+.social-media-container,
+.social-media-container li,
+.admin-login-wrapper form,
+.btn-edit,
+.btn-delete,
+.product-card,
+.body-title,
+input,
+textarea,
+.news{
+  box-sizing: border-box;
+}
+#user-options,
+#user-ordered,
+#message-ordered,
+#product-ordered,
+.btn-edit,
+.btn-delete,
+.admin-crud-form > form,
+#button-menu-nav,
+.product-card
+hr{
+  border-width: 1px;
+  border-style: solid;
 }
 input,
 textarea{
   border: none;
   outline: none;
   width: 100%;
-  box-sizing: border-box;
   padding: 3%;
   background-color: var(--grey-light-5);
 }
@@ -71,24 +119,15 @@ ul {
   color: var(--blue-light);
   border-left-color: var(--blue-light);
   border-left-style: solid;
-  box-sizing: border-box;
   width: 100%;
   margin-top: 2%;
   padding-left: 1%;
-}
-.bell {
-  background-image: url("../img/bell-fill.svg");
-  background-repeat: no-repeat;
-  width: 1.2em;
-  height: 1.2em;
-  display: block;
 }
 .btn {
   border: none;
   outline: none;
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
-  display: flex;
   align-items: center;
 }
 .btn:active {
@@ -123,7 +162,12 @@ textarea:focus {
   box-shadow: 0 0 7px var(--blue-light-2);
   transition: all 0.2s ease-in-out;
 }
-
+.text-alert{
+  color:var(--red-alert)!important;
+}
+.text-success{
+  color: var(--blue-light-2);
+}
 @media (max-width: 667px) {
   .body-title {
     font-size: 0.6em;

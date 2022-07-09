@@ -1,26 +1,20 @@
-.toolbar,
-.user-options,
-.panel-wrapper-select {
-  display: flex;
-}
 #user-options,
 #user-ordered,
 #message-ordered,
 #product-ordered {
-  border: 1px solid var(--blue-light-2);
+  border-color: (--blue-light-2);
   outline: none;
   border-radius: 10px;
 }
 .btn-edit,
 .btn-delete {
-  border: 1px solid var(--grey-light);
+  border-color:(--grey-light);
   color: var(--font-dark-1);
-  justify-content: center;
-  box-sizing: border-box;
+  justify-content: space-around;
 }
-.btn-delete-ms{
-  width: 100%!important;
-  color:var(--font-light);
+.btn-delete-ms {
+  width: 100% !important;
+  color: var(--font-light);
 }
 .btn-edit svg,
 .btn-delete svg {
@@ -33,8 +27,6 @@
 }
 #panel-message input {
   width: 100%;
-  border: none;
-  outline: none;
 }
 #panel-message input[type="submit"] {
   color: var(--font-light);
@@ -43,9 +35,7 @@
 .tc-submit {
   border: none !important;
 }
-.tr {
-  display: flex;
-}
+
 .title-tc {
   font-weight: 600;
 }
@@ -54,7 +44,7 @@
 }
 hr {
   margin: 0.5em 0;
-  border: 1px solid var(--grey-light-2);
+  border-color:var(--grey-light-2);
 }
 .btn-edit:active,
 .btn-delete:active {
@@ -81,16 +71,23 @@ hr {
   font-weight: 600;
   text-align: center;
 }
-.text-alert{
-  color: var(--blue-light);
-}
-.text-success{
-  color: var(--blue-light-2);
-}
 .btn-submit {
   padding: 1% !important;
   border-radius: 0;
 }
+.content-delete {
+  border: none !important;
+  background-color: transparent !important;
+}
+#close-session a {
+  color: var(--font-light);
+}
+.admin-crud-form > form {
+    padding: 3%;
+    border-color: var(--grey-light-3);
+    border-radius: 10px;
+    font-size: 1.3em;
+  }
 @media (max-width: 667px) {
   .panel-wrapper,
   .toolbar {
@@ -173,6 +170,13 @@ hr {
   .tc-submit .btn-primary {
     width: 100%;
   }
+  .form-tc {
+    width: 100%;
+  }
+  .admin-crud-form > form input,
+  .admin-crud-form > form textarea{
+    margin-bottom: 3%;
+  }
 }
 @media (min-width: 668px) {
   .panel-wrapper,
@@ -188,6 +192,11 @@ hr {
   .btn-delete {
     width: 100%;
     padding: 4%;
+  }
+  .tr-ms {
+    border: 1px solid var(--grey-light);
+    padding: 2%;
+    margin-bottom: 5%;
   }
 }
 @media (min-width: 668px) and (max-width: 915px) {
@@ -233,24 +242,42 @@ hr {
 }
 
 @media (min-width: 916px) {
+  .user-options {
+    width: 30%;
+  }
+  .user-options > form {
+    width: 100%;
+  }
+  select#user-options {
+    padding: 2%;
+    color: var(--blue-light);
+    font-weight: 600;
+    font-size: 1.2em;
+  }
   .panel-wrapper {
     min-height: calc(100vh - 77.44px);
+    margin-top: 1em;
   }
   .toolbar,
   .panel-wrapper {
     width: 95%;
   }
   #close-session {
-    margin-right: 2.6em;
-    padding: 0.5em;
+    padding: 1%;
+    font-size: 1.2em;
   }
-  .panel-wrapper {
-    margin-top: 1em;
+  .table-message{
+    margin-top: 2%;
   }
-  .panel-wrapper-select {
-    margin-top: 0.5em;
+  .message-form{
+    padding: 2%;
+    margin-top: 2%;
   }
-  .panel-wrapper-select p {
+  .message-form input{
+    padding: 2%;
+    margin-top: 1%;
+  }
+  p {
     margin-right: 1em;
   }
   .table {
@@ -268,9 +295,9 @@ hr {
   .btn-editar {
     padding: 0.5em;
   }
-  #panel-message input[type="submit"] {
-    width: 5em !important;
-    height: 2em;
+  .message-form input[type="submit"] {
+    width: 10% !important;
+    font-size: 1.2em;
   }
   #create-product,
   #create-user-admin {
@@ -297,7 +324,6 @@ hr {
   .th,
   .tc {
     justify-content: center;
-    align-items: center;
   }
   .th {
     background-color: var(--blue-light-3);
@@ -316,13 +342,6 @@ hr {
   }
   .table {
     border: 1px solid var(--blue-light-3);
-  }
-  .table-message {
-    width: 50%;
-    margin: auto;
-  }
-  .table-message .tbody {
-    margin-top: 10%;
   }
   .tr-ms {
     background: var(--grey-light-2);
@@ -355,17 +374,12 @@ hr {
     min-height: calc(100vh - 230px);
     align-items: center;
   }
-  .admin-crud-form form {
-    padding: 3%;
-    border: 1px solid var(--grey-light-3);
-    border-radius: 10px;
-    font-size: 1.3em;
-  }
-  .admin-crud-form form label,
-  .admin-crud-form form input {
+  
+  .admin-crud-form > form label,
+  .admin-crud-form > form input {
     margin: 1% 0;
   }
-  .admin-crud-form form input[type="submit"] {
+  .admin-crud-form > form input[type="submit"] {
     background-color: var(--blue-light);
     color: var(--font-light);
     font-size: 1em;
@@ -380,7 +394,7 @@ hr {
     width: 30px;
     height: 30px;
   }
-  .admin-crud-form form .btn-primary{
-    justify-content: center!important;
+  .admin-crud-form form .btn-primary {
+    justify-content: center !important;
   }
 }

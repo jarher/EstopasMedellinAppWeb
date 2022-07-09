@@ -7,15 +7,6 @@
 <div class="panel-wrapper " id="panel-products">
       <div class="panel-wrapper-header">
         <div class="title-panel">Panel de productos</div>
-        <div class="panel-wrapper-select">
-          <p>ordenar por:</p>
-          <select name="product-ordered" id="product-ordered">
-            <option value="order-alpha">Alfabéticamente</option>
-            <option value="order-quantity">Cantidad</option>
-            <option value="order-color">Color</option>
-            <option value="order-weight">Peso</option>
-          </select>
-        </div>
       </div>
       <div class="table">
         <div class="theader">
@@ -59,7 +50,7 @@
                   </div>
                 </div>
                 <div class="tc row tc-border">
-                  <form method="POST">
+                  <form method="POST" class="form-tc">
                     <input type="hidden" name="r" value="edit-product-form" />
                     <input type="hidden" name="product-id" value="' . $product_data[$n]["product_id"] . '" />
                     <input type="hidden" name="product-name" value="' . $product_data[$n]["nombre"] . '" /> 
@@ -80,7 +71,7 @@
                   
                 </div>
                 <div class="tc row tc-border">
-                  <form method="POST">
+                  <form method="POST" class="form-tc">
                     <input type="hidden" name="r" value="delete-product-form" />
                     <input type="hidden" name="product-id" value="' . $product_data[$n]["product_id"] . '" />
                     <button class="btn btn-delete" type="submit">

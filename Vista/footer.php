@@ -5,6 +5,28 @@
     
     $message_error = '<p class="text-alert">lamentablemente ha ocurrido un error, inténtelo de nuevo más tarde</p>';
     
+    if(!empty($_POST['news-submit'])){
+                    
+        $suscriptor = array(
+            'suscribe_email' => $_POST['suscriber']
+        );
+                    
+        $enviar_suscripcion->create($suscriptor);
+
+        print('
+        <div class="modal-container">
+        <div class="news">
+            <div class="close-news-wrapper">
+                <button class="close-btn" id="close-modal"></button>
+            </div>
+            <div class="news-title">Gracias</div>
+                <hr/>
+                <p>Usted se ha suscrito satisfactoriamente</p>
+        </div>
+    </div>');
+    $_POST['news-submit'] = null;
+    }
+
     
 ?>
 </main>
@@ -13,38 +35,18 @@
             <div class="close-news-wrapper">
                 <button class="close-btn" id="close-modal"></button>
             </div>
-            <?php 
-                if(isset($_POST['news-submit'])){
-
-                    $suscriptor = array(
-                        'suscribe_email' => $_POST['suscriber']
-                    );
-                    
-                    if($enviar_suscripcion->create($suscriptor)){
-                        print($message_success);
-                    }else{
-                        print($message_error);
-                    }
-                } else{
-                    print('
-                        <div class="news-title">SUSCRIPCIÓN</div>
-                        <hr/>
-                        <p>Reciba directamente en su correo electrónico alertas sobre nuevos productos, promociones y ofertas</p>
-                        <div class="form-newsletter-wrapper">
-                            <form method="POST">
-                                <label for="suscriber">
-                                    SU DIRECCIÓN DE CORREO ELECTRÓNICO *
-                                </label>
-                                <input type="email" name="suscriber" id="suscriber"
-                                    placeholder="Introduzca su correo electrónico aquí *" required/>
-                                <input type="submit" value="Suscribirme" name="news-submit" class="btn-primary"/>
-                            </form>
-                            <p class="warn-field">* Campo obligatorio</p>
-                        </div>
-                    ');
-                }
-            ?>
-            
+            <div class="news-title">SUSCRIPCIÓN</div>
+                <hr/>
+                <p>Reciba directamente en su correo electrónico alertas sobre nuevos productos, promociones y ofertas</p>
+                <div class="form-newsletter-wrapper">
+                    <form method="POST">
+                        <label for="suscriber">SU DIRECCIÓN DE CORREO ELECTRÓNICO *</label>
+                        <input type="email" name="suscriber" id="suscriber"
+                            placeholder="Introduzca su correo electrónico aquí *" required/>
+                        <input type="submit" value="Suscribirme" name="news-submit" class="btn-primary"/>
+                    </form>
+                <p class="warn-field">* Campo obligatorio</p>
+            </div>
         </div>
     </div>
 </div>
@@ -78,15 +80,15 @@
             <a href="contacto">Formulario de contacto</a>
         </div>
     </address>
-    <div class="menu-nav-footer">
+    <!-- <div class="menu-nav-footer">
         <ul>
             <li><a href="home">Inicio</a></li>
             <li><a href="">Acerca de</a></li>
             <li><a href="productos">Productos</a></li>
             <li><a href="">Mapa del sitio</a></li>
         </ul>
-    </div>
-    <div class="redes-wrapper">
+    </div> -->
+    <!-- <div class="redes-wrapper">
         <ul class="social-media-container">
             <li>
                 <a href="" target="_blank">
@@ -116,7 +118,7 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
     <div class="copyright-wrapper">
         <p>Copyright &copy;2022</p>
     </div>
@@ -126,6 +128,7 @@
 <script src="./public/js/close-modal.js"></script>
 <script src="./public/js/menu-collapse.js"></script>
 <script src="./public/js/redirect.js"></script>
+<script src="./public/js/load.js"></script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@
     </form>
 </div>
 <?php if(isset($_GET['error'])){ ?>
-    <div class="">
+    <div>
         <p class="item error">
 <?php print ($_GET['error']);} ?>
         </p>

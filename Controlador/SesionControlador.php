@@ -11,7 +11,9 @@
         }
 
         public function logout(){
-            
+            session_start();
+            session_destroy();
+            header('Location: ./');
         }
         public function __destruct(){
             $this;

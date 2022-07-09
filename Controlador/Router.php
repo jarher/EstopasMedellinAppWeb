@@ -58,7 +58,12 @@
                         }
                     }
                     break;
-                
+                    case 'create-message':
+                        $controlador->load_view('crud-administrador');
+                    case 'salir':
+					$user_session = new SesionControlador();
+					$user_session->logout();
+					break;
                 default:
                     $controlador->load_view('error_404');
                     break;

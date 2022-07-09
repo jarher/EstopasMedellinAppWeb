@@ -5,14 +5,6 @@
 <div class="panel-wrapper" id="panel-contact">
       <div class="panel-wrapper-header">
         <div class="title-panel">Mensajes de usuarios</div>
-        <div class="panel-wrapper-select">
-          <p>ordenar por:</p>
-          <select name="message-ordered" id="message-ordered">
-            <option value="order-alpha">Alfabéticamente</option>
-            <option value="order-newest">Fecha ingreso reciente</option>
-            <option value="order-latest">fecha ingreso antíguo</option>
-          </select>
-        </div>
       </div>
 
       <div class="table-message">
@@ -25,7 +17,7 @@
               for($n = 0; $n < count($message_data); $n++){
                 $email_message = $message_data[$n]['email'];
                 printf('
-                <div class="tr-ms">
+                <div class="tr-ms" data-name='.$message_data[$n]['nombre'].' data-date='.$message_data[$n]['fecha_ingreso'].'>
                   <div class="tc">
                     <div class="title-ms">Nombre: </div>
                     <div class="content-ms">%s</div>
@@ -51,7 +43,7 @@
                     <div class="content-ms">%s</div>
                   </div>
                   <div class="tc">
-                    <div class="content-ms">
+                    <div class="content-ms content-delete">
                       <form method="POST">
                         <input type="hidden" name="r" value="delete-message-form"/>
                         <input type="hidden" name="email_message" value="'.$email_message.'"/>

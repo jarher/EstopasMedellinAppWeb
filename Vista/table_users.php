@@ -5,14 +5,6 @@
 <div class="panel-wrapper " id="panel-users">
       <div class="panel-wrapper-header">
         <div class="title-panel">Subscriptores</div>
-        <div class="panel-wrapper-select">
-          <p>ordenar por:</p>
-          <select name="user-ordered" id="user-ordered">
-            <option value="order-alpha">Alfabéticamente</option>
-            <option value="order-newest">Fecha ingreso reciente</option>
-            <option value="order-latest">fecha ingreso antíguo</option>
-          </select>
-        </div>
       </div>
       <div class="table">
         <div class="theader">
@@ -23,7 +15,7 @@
         <div class="tbody">
           <?php 
             if(empty($user_data)){
-               print ('<p>No hay usuarios suscriptoress</p>');
+               print ('<p class="text-alert">No hay usuarios suscriptores</p>');
             }else{
               for($n = 0; $n < count($user_data); $n++){
                 print('<div class="tr">
@@ -56,11 +48,11 @@
           ?>
         </div>
       </div>
-      <div class="btn-create-wrapper">
+      <!-- <div class="btn-create-wrapper">
         <form method="POST">
-          <input type="hidden" name="r" value="create-message"/>
-          <input type="hidden" name="set" value="create" />
-          <input type="submit" value="Crear mensaje para los suscriptores" class="btn btn-primary btn-submit"/>
+          <input type="hidden" name="r" value="create-message-form"/> -->
+          <!-- <input type="hidden" name="set" value="create" /> -->
+          <!-- <input type="submit" value="Crear mensaje para los suscriptores" class="btn btn-primary btn-submit"/>
         </form>
-      </div>
+      </div> -->
     </div>

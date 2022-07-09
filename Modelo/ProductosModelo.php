@@ -24,14 +24,10 @@
              foreach ($product_data as $key => $value){
                 $$key = $value;
             }
-            var_dump($product_id);
-            var_dump($product_name);
-            var_dump($product_weight);
-            var_dump($product_color);
-            var_dump($product_description);
-            var_dump($product_img);
 
-            $this->query = "UPDATE productos SET product_id = '$product_id', nombre = '$product_name', precio = '$product_weight', color = '$product_color', descripcion = '$product_description', imgUrl = '$product_img' WHERE product_id = '$product_id'";
+            $id = intval($product_id);
+
+            $this->query = "UPDATE productos SET nombre = '$product_name', peso = '$product_weight', color = '$product_color', descripcion = '$product_description', imgUrl = '$product_img' WHERE product_id = '$id'";
             
             $this->set_query();
         }

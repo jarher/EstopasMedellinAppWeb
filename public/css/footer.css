@@ -14,7 +14,6 @@
   margin: 5% 5%;
   border-radius: 20px;
   padding: 3%;
-  box-sizing: border-box;
   float: right;
 }
 .close-btn {
@@ -34,8 +33,6 @@
   transform: scale(0.9);
 }
 .close-news-wrapper {
-  position: relative;
-  display: flex;
   justify-content: flex-end;
 }
 .news-title {
@@ -54,7 +51,6 @@ footer a {
 }
 #btn-subscribe {
   color: var(--font-light);
-  display: flex;
   align-items: center;
   transition: all 0.2s ease-in-out;
   background-color: #493e75;
@@ -68,11 +64,7 @@ footer a {
 .copyright-wrapper {
   text-align: center;
 }
-.social-media-container,
-.social-media-container li {
-  display: flex;
-  box-sizing: border-box;
-}
+
 .social-media-container li a > svg {
   transition: all 0.2s ease-in-out;
 }
@@ -288,7 +280,6 @@ footer a {
     order: 1;
     width: 100%;
     margin-bottom: 2%;
-    padding: 3% 0 3%;
     position: relative;
   }
   .social-media-container {

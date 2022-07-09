@@ -34,7 +34,7 @@
 <div class="product-container">
     <?php 
         if(empty($product_data)){
-
+            print('<p class="text-success">No hay productos por mostrar</p>');
         }else{
             for($n=0; $n < count($product_data); $n++){
             printf($template,
@@ -48,87 +48,4 @@
     }
         
     ?>
-    <!-- <div class="product-card">
-        <div class="product-title">Nombre:
-        </div>
-        <div>
-            <div class="product-img-wrapper">
-                <img src="./public/img/estopa-1.png" alt="" class="product-img">
-            </div>
-            <div class="descriptions-product">
-                <div>Cantidad: 
-                    <p class="desc-value">1</p>
-                </div>
-                <div>Peso: 
-                    <p class="desc-value">250g</p>
-                </div>
-                <div>Color: 
-                    <p class="desc-value">Blanco</p>
-                </div>
-                
-            </div>
-        </div>
-        <div>Descripción: <p class="desc-text">Estopa fina, peinada y empacada</p>
-        </div>
-    </div>
-    <div class="product-card">
-        <div class="product-title">Nombre:
-        </div>
-        <div>
-            <div class="product-img-wrapper">
-                <img src="./public/img/estopa-2.png" alt="" class="product-img">
-            </div>
-            <div class="descriptions-product">
-                <div>Cantidad: <p class="desc-value">1</p>
-                </div>
-                <div>Peso: <p class="desc-value">250g</p>
-                </div>
-                <div>Color: <p class="desc-value">Blanco</p>
-                </div>
-    
-            </div>
-        </div>
-        <div>Descripción: <p class="desc-text">Estopa fina, peinada y empacada</p>
-        </div>
-    </div>
-    <div class="product-card">
-        <div class="product-title">Nombre:
-        </div>
-        <div>
-            <div class="product-img-wrapper">
-                <img src="./public/img/estopa-1.png" alt="" class="product-img">
-            </div>
-            <div class="descriptions-product">
-                <div>Cantidad: <p class="desc-value">1</p>
-                </div>
-                <div>Peso: <p class="desc-value">250g</p>
-                </div>
-                <div>Color: <p class="desc-value">Blanco</p>
-                </div>
-    
-            </div>
-        </div>
-        <div>Descripción: <p class="desc-text">Estopa fina, peinada y empacada</p>
-        </div>
-    </div>
-    <div class="product-card">
-        <div class="product-title">Nombre:
-        </div>
-        <div>
-            <div class="product-img-wrapper">
-                <img src="./public/img/estopa-1.png" alt="" class="product-img">
-            </div>
-            <div class="descriptions-product">
-                <div>Cantidad: <p class="desc-value">1</p>
-                </div>
-                <div>Peso: <p class="desc-value">250g</p>
-                </div>
-                <div>Color: <p class="desc-value">Blanco</p>
-                </div>
-    
-            </div>
-        </div>
-        <div>Descripción: <p class="desc-text">Estopa fina, peinada y empacada</p>
-        </div>
-    </div> -->
 </div>

@@ -1,45 +1,27 @@
-<div class="slideshow-container">
-  <div class="slide active">
-    <div class="img-container">
-      <img
-        src="./public/img/obrero-limpiando-con-estopa.jpg"
-        alt="operario limpiando con estopa"
-      />
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./public/img/obrero-limpiando-con-estopa-2.jpg" alt="...">
+      <div class="caption-img">Tenemos la mejor estopa para la limpieza</div>
     </div>
-    <div class="texts-container">
-      <div class="text-slideshow">Tenemos la mejor estopa para la limpieza</div>
-      
+    <div class="carousel-item">
+      <img src="./public/img/servicio-cliente-2.jpg" alt="...">
+      <div class="caption-img">Ofrecemos el mejor servicio a nuestra distinguida clientela</div>
     </div>
-  </div>
-  <div class="slide">
-    <div class="img-container">
-      <img
-        src="./public/img/servicio-cliente.jpg"
-        alt=""
-      />
+    <div class="carousel-item">
+      <img src="./public/img/entrega-domicilio-2.jpg" alt="...">
+      <div class="caption-img">Entrega a domicilio para todo el país</div>
     </div>
-    <div class="texts-container">
-      <div class="text-slideshow">Ofrecemos el mejor servicio a nuestra distinguida clientela</div>
-      
-    </div>
-  </div>
-  <div class="slide">
-    <div class="img-container">
-      <img
-        src="./public/img/entrega-domicilio.jpg"
-        alt=""
-      />
-    </div>
-    <div class="texts-container">
-      <div class="text-slideshow">
-        Entrega a domicilio para todo el país
-      </div>
-      
-    </div>
-  </div>
-  <div class="slideshow-controllers">
   </div>
 </div>
+
+<hr/>
+
 <div class="service-description-wrapper">
   <div class="service-wrapper">
     <div class="service-img-wrapper">
@@ -49,6 +31,7 @@
       Somos los primeros, con 45 años en el mercado
     </div>
   </div>
+  <hr />
   <div class="service-wrapper">
     <div class="service-img-wrapper">
       <img src="./public/img/sin-intermediario.png" alt="" />
@@ -57,6 +40,7 @@
       No somos intermediarios, trabajamos directamente
     </div>
   </div>
+  <hr />
   <div class="service-wrapper">
     <div class="service-img-wrapper">
       <img src="./public/img/estopa-calidad.png" alt="" />

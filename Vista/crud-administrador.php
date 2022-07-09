@@ -1,4 +1,5 @@
 <?php 
+
     $administrador = new AdministradorControlador();
     
     $producto = new ProductosControlador();
@@ -162,7 +163,7 @@
                 'product_img' => $_FILES["product-img"]["name"]
                 );
                 $producto->create($new_product);
-                print('<p class="text-alert">¡El nuevo producto fue creado con éxito!</p>');
+                print('<p class="text-success">¡El nuevo producto fue creado con éxito!</p>');
             }else{
                 print($errMSG);
             }   
@@ -260,15 +261,15 @@
                     
                     $producto->update($new_product);
 
-                    print('<p class="text-alert">¡El nuevo producto fue actualizado con éxito!</p>');
+                    print('<p class="text-success">¡El nuevo producto fue actualizado con éxito!</p>');
                 }else{
                     print($errMSG);
                 }   
-                // print('<script>
-                //     window.onload = function(){
-                //         redirect(2);
-                //     }
-                //     </script>');
+                print('<script>
+                    window.onload = function(){
+                        redirect(2);
+                    }
+                    </script>');
             
         }
         else if($_POST['r'] == 'delete-product-form'){
@@ -315,7 +316,7 @@
             $template = '<p class="text-success">El usuario %s fue eliminado</p>
             <script>
                  window.onload = function(){
-                     redirect(0);
+                     redirect(1);
                 }
              </script>';
 
@@ -346,5 +347,33 @@
 
             printf($template, $_POST['email_message']);
         }
+        else if($_POST['r'] == 'create-message-form'){
+            print('<div class="panel-wrapper " id="panel-message">
+                    <div class="title-panel">Enviar mensaje a suscriptores</div>
+                                <form method="POST" class="form message-form">
+                                    <input type="hidden" name="r" value="send-message" />
+                                        <div class="form-wrapper">
+                                        <label>Correo del administrador</label>
+                                        <input type="text" name="admin-email" id="admin-email" placeholder="Correo administrador" />
+                                        </div>
+                                        <div class="form-wrapper">
+                                        <label>Asunto</label>
+                                        <input type="text" name="admin-subject" id="admin-subject" placeholder="Asunto" />
+                                        </div>
+                                        <div class="form-wrapper">
+                                        <label>mensaje</label>
+                                        <input type="text" name="admin-message" id="admin-message" placeholder="Mensaje" />
+                                        </div>
+                                        <div class="form-wrapper">
+                                        <input type="submit" value="Enviar" class="btn-primary">
+                                    
+                                </form>
+                                    
+                            
+                        </div>');
+        }
+        // else if($_POST['r'] == 'send-message'){
+
+        // }
     }
 ?>

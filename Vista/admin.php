@@ -17,7 +17,7 @@
     </div>
     <div class="close-session-wrapper">
         <button id="close-session" class="btn btn-alert">
-            Cerrar sesión
+            <a href="salir">Cerrar sesión</a>    
         </button>
     </div>
 </div>
@@ -48,7 +48,9 @@
             || $_POST['r'] == 'delete-user-form'
             || $_POST['r'] == 'eliminate-user'
             || $_POST['r'] == 'delete-message-form'
-            || $_POST['r'] == 'eliminate-message'){
+            || $_POST['r'] == 'eliminate-message'
+            || $_POST['r'] == 'create-message-form'
+            || $_POST['r'] == 'send-message'){
                 
             $controlador->load_view('crud-administrador');
         }
